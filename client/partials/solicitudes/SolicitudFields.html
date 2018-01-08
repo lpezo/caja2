@@ -1,0 +1,66 @@
+<template name="SolicitudFields">
+        <div class="row">
+            <div class="col-lg-3">
+            {{> afQuickField name='tipo'}}
+            </div>
+            <div class="col-lg-3">
+            {{> afQuickField name='fecha'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+            {{> afQuickField name='nombre'}}
+            {{> afQuickField name='resp'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            {{> afQuickField name='monto'}} 
+            </div>
+            <div class="col-lg-3">
+            {{> afQuickField name='moneda'}} 
+            </div>
+        </div>
+        {{#unless afFieldValueIs name="tipo" value='gasto'}}
+        <div class="row">
+            <div class="col-lg-10 horizontal">
+            {{> afQuickField name='lugar'}}
+            </div>
+        </div>
+        {{/unless}}
+        <div class="row">
+            <div class="col-lg-6 horizontal">
+            {{#if afFieldValueIs name="tipo" value='viaje'}}
+                {{> afQuickField name='fviaje'}}
+            {{/if}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-10">
+            {{> afQuickField name='mot'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+            {{> afQuickField name='cli'}}
+            </div>
+            <div class="col-lg-5">
+            {{> afQuickField name='cont'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+            {{> afQuickField name='proy'}}
+            </div>
+            <div class="col-lg-5">
+            {{> afQuickField name='costo'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-5">
+            {{#if afFieldValueIs name="costo" value='A'}}
+                {{> afQuickField name='areapra'}}
+            {{/if}}
+            </div>
+        </div>
+</template>

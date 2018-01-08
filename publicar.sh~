@@ -1,0 +1,12 @@
+#pwd root: markweb01
+rsync -u -e "ssh -p 9090" *.js root@190.81.56.82:/opt/marca
+rsync -u -e "ssh -p 9090" *.json root@190.81.56.82:/opt/marca
+rsync -ru -e "ssh -p 9090" app/* root@190.81.56.82:/opt/marca/app
+rsync -ru -e "ssh -p 9090" config/* root@190.81.56.82:/opt/marca/config
+rsync -ru -e "ssh -p 9090" public/modules/* root@190.81.56.82:/opt/marca/public/modules
+rsync -u -e "ssh -p 9090" public/config.js root@190.81.56.82:/opt/marca/public/
+
+rsync -r -e "ssh -p 9090" --exclude public/lib --exclude node_modules * root@190.81.56.82:/opt/marca
+
+rsync -ru -e "ssh -p 9090" --exclude .meteor --exclude node_modules . root@mark:/opt/caja2
+

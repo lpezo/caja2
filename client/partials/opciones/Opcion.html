@@ -1,0 +1,55 @@
+<template name="Opcion">
+    <div class="row">
+        <div class="col-lg-10">
+            <h1 class="page-header">Opciones</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Default
+                </div>
+                <div class="panel-body">
+
+        {{#autoForm id="updateOpcionForm" collection="Opcion" type="update" doc=docOpcion validation="submit"}}
+
+        <div class="row">
+            <div class="col-lg-8">
+            {{> afQuickField name='default'}}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-3">
+            {{> afQuickField name='aGerente'}}
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-10">
+            {{> afQuickField name='email'}}
+            </div>
+        </div>
+
+        <div>
+            <button class="btn btn-primary" type="submit">Grabar</button>
+        </div>
+
+        {{/autoForm}}
+
+                </div>
+                <!-- /.panel-body -->
+                <div class="panel-foot">
+                    <div class="alert alert-danger">
+                        {{$.Session.get 'error'}}
+                    </div>                    
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</template>

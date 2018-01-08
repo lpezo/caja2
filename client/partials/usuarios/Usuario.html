@@ -1,0 +1,62 @@
+<template name="Usuario">
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">Usuario</h1>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>    <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-body">
+        <!-- {{> quickForm collection="Solicitudes" id="insertSolicitudForm" type="insert" doc=byDefault}}   
+        -->
+        {{#autoForm id="updateUsuarioForm" collection="Usuarios" type="update" doc=byDefault}}
+
+            <div class="row">
+                <div class="col-lg-2">
+                {{> afQuickField name='username' disabled=true}}
+                </div>
+                <div class="col-lg-6">
+                {{> afQuickField name='name'}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-6">
+                {{> afQuickField name='email' type='email'}}
+                </div>
+                <div class="col-lg-2">
+                {{> afQuickField name='role' disabled=true}}
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-2">
+                {{> afQuickField name='area'}} 
+                </div>
+                <div class="col-lg-2">
+                {{> afQuickField name='dni'}}
+                </div>
+                <div class="col-lg-3">
+                {{> afQuickField name='tipo'}}
+                </div>
+            </div>
+            <div>
+                <button type="submit">Grabar</button>
+            </div>
+        {{/autoForm}}    
+                </div>
+                <!-- /.panel-body -->
+                <div class="panel-foot">
+                    <div class="alert alert-danger">
+                        {{$.Session.get 'error'}}
+                    </div>                    
+                    <a href="/tabla/usuarios">Regresar</a>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</template>
+
