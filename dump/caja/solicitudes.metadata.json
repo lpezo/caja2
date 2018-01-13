@@ -1,0 +1,1 @@
+{ "indexes" : [ { "v" : 1, "key" : { "_id" : 1 }, "name" : "_id_", "ns" : "caja.solicitudes" }, { "v" : 1, "key" : { "userMsg" : 1, "fecha" : -1 }, "name" : "userMsg_1_fecha_-1", "ns" : "caja.solicitudes" }, { "v" : 1, "key" : { "fecha" : 1 }, "name" : "fecha_1", "ns" : "caja.solicitudes" } ] }
