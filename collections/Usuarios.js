@@ -66,6 +66,14 @@ UsuarioSchema = new SimpleSchema({
 		type: String,
 		label: 'Código Responsable',
 		optional: true
+	},
+	jefe: {
+		type: String,
+		label: 'Jefe'
+	},
+	socio: {
+		type: String,
+		label: 'Socio'
 	}
 });
 
