@@ -28,10 +28,13 @@ Template.Solicitud.helpers({
     		let doc = {num: 0, fecha: new Date(new Date().getTime()), moneda:'PEN', 
                 nombre: {nombre: usu.name}, cli: xcliente};
 
-            if (usu.hasOwnProperty('resp')){
-                let resp = Usuarios.findOne({username: usu.resp});
+            //if (usu.hasOwnProperty('resp')){
+            if (usu.hasOwnProperty('jefe')){
+                let resp = Usuarios.findOne({username: usu.jefe});
                 if (resp)
                     doc['resp'] = {nombre: resp.name};
+                if (usu.socio)
+                    doc['codsocio'] = usu.socio;
             }
             //console.log('byDefault:', doc);
             return doc;
@@ -67,13 +70,14 @@ Template.Solicitud.events({
     if (event.target.name == 'nombre.nombre'){
         //console.log("selected ", doc);
         let input_resp = template.find('[name="resp.nombre"]');
-        if (input_resp){
-            if (doc.resp){
-                let find_resp = Usuarios.findOne({username: doc.resp});
+        //if (input_resp){
+            //if (doc.resp){
+            if (doc.jefe){
+                //let find_resp = Usuarios.findOne({username: doc.resp});
+                let find_resp = Usuarios.findOne({username: doc.jefe});
                 if (find_resp)
                     input_resp.value = find_resp.name;
             }
-        }
     }
     //console.log('event: ', event);
   }
@@ -113,9 +117,9 @@ AutoForm.hooks({
                 let valor = parseFloat(doc.monto.replace(',', ''));
                 //console.log(valor, opcion.mayorA);
                 if (doc.moneda == 'PEN' && valor > opc.aGerente.mayorSoles)
-                    doc.userMsg = 'gerente';  // por gerente
+                    doc.userMsg = 'socio';  // por gerente
                 else if (doc.moneda == 'USD' && valor > opc.aGerente.mayorDol)
-                    doc.userMsg = 'gerente';  // por gerente
+                    doc.userMsg = 'socio';  // por gerente
                 else    
                     doc.userMsg = doc.resp.codigo;    //por responsable
 
@@ -135,7 +139,8 @@ AutoForm.hooks({
 
                 doc.author = usu.username;
                 doc.estado = 'N';
-
+                if (usu.socio)
+                    doc.codsocio = usu.socio;
 
                 var self = this;
                 let year = doc.fecha.getFullYear().toString();

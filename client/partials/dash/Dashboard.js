@@ -10,7 +10,7 @@ Template.Dashboard.onCreated(function(){
 			Session.set('xfecha', {fecha1: ant, fecha2: hoy} );
 		}
 
-		self.subscribe('Solicitudes', Session.get('xtipo'), Session.get('xfecha'));
+		self.subscribe('Solicitudes', Session.get('xtipo'), Session.get('xfecha'), Session.get('CurrentUser'));
 		self.subscribe('Tipos');
 
 	});
@@ -73,7 +73,7 @@ Template.Dashboard.events({
 	'click #item' : function(event, template) {
 		let xfech = Session.get('xfecha');
 		console.log('item:', this, xfech);
-		template.subscribe('Solicitudes', this.name, xfech);
+		template.subscribe('Solicitudes', this.name, xfech, Session.get('CurrentUser'));
 		Session.set('xtipo', this.name);
 	},
 	'click .reactive-table tbody tr': function (event) {
@@ -99,7 +99,7 @@ Template.Dashboard.events({
 				xfecha.fecha1 = e.date;
 				Session.set('xfecha', xfecha);
 				let xtipo = Session.get('xtipo');
-				template.subscribe('Solicitudes', xtipo, xfecha);
+				template.subscribe('Solicitudes', xtipo, xfecha, Session.get('CurrentUser'));
 				//console.log(xfecha, Session.get('xfecha'));
 			}
 		});
@@ -117,7 +117,7 @@ Template.Dashboard.events({
 				xfecha.fecha2 = e.date;
 				Session.set('xfecha', xfecha);
 				let xtipo = Session.get('xtipo');
-				template.subscribe('Solicitudes', xtipo, xfecha);
+				template.subscribe('Solicitudes', xtipo, xfecha, Session.get('CurrentUser'));
 				//console.log(xfecha, Session.get('xfecha'));
 			}
 		});

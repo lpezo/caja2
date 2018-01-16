@@ -11,9 +11,9 @@ Template.MainLayout.helpers({
 	mensajes: function(){
 		let user = Session.get('CurrentUser');
 		if (user){
-			if (user.role == 'gerente')
-				return Solicitudes.find({userMsg: user.role}, {sort:{fecha:-1}});
-			else
+			//if (user.role == 'gerente')
+			//	return Solicitudes.find({userMsg: user.role}, {sort:{fecha:-1}});
+			//else
 				return Solicitudes.find({userMsg: user.username}, {sort:{fecha:-1}});
 		}
 	},

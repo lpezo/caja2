@@ -48,6 +48,7 @@ NombreSchema = new SimpleSchema({
     type: String,
     label: 'Código:',
     optional: true,
+    index: true,
     autoform: {
       type: 'hidden'
     }    
@@ -335,8 +336,12 @@ SolicitudSchema = new SimpleSchema({
     type: String,
     label: 'Área de práctica',
     optional: true
-  }
+  },
 
+  codsocio: {
+    type: String,
+    optional: true
+  },
 
 });
 

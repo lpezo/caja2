@@ -245,25 +245,28 @@ Meteor.methods({
             let curTesorero = Usuarios.findOne({role:'tesorero'});
             if (curTesorero)
             	xto += curTesorero.email;
-            if (curnombre.jefe)
+            //if (curnombre.jefe)
+            if (doc.resp.codigo)
             {
-            	let usuJefe = Usuarios.findOne({username: curnombre.jefe});
-            	if (usuJefe)
-            		xto += ";" + usuJefe.email;
+            	//let usuJefe = Usuarios.findOne({username: curnombre.jefe});
+            	let usuResp = Usuarios.findOne({username: doc.resp.codigo});
+            	if (usuResp)
+            		xto += ";" + usuResp.email;
             }
-            if (curnombre.socio)
+            if (curnombre.socio && doc.userMsg == 'socio')	//Si es monto mayores, usrMsg tiene la palabra socio
             {
             	let usuSocio = Usuarios.findOne({username: curnombre.socio});
             	if (usuSocio)
             		xto += ";" + usuSocio.email;
             }
-
+            /*
             if (!curnombre.hasOwnProperty('resp') || curnombre.resp !== doc.resp.codigo){
                 //console.log('update:', codigoUsu, codigoResp);
                 Usuarios.update({username: doc.nombre.codigo}, {$set: {resp: doc.resp.codigo}}, function(error, cant){
                     return true;
                 });
             }
+            */
             console.log('email to: ', xto);
             console.log('Aviso!: ', 'Correo Desactivado');
             /*

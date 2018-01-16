@@ -62,18 +62,20 @@ UsuarioSchema = new SimpleSchema({
 		label: 'Role',
 		optional: true
 	},
+
 	resp: {
+		//depracated
 		type: String,
 		label: 'Código Responsable',
 		optional: true
 	},
 	jefe: {
 		type: String,
-		label: 'Jefe'
+		label: 'Còdigo de Jefe'
 	},
 	socio: {
 		type: String,
-		label: 'Socio'
+		label: 'Código de Socio'
 	}
 });
 

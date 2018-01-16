@@ -8,7 +8,7 @@ Meteor.publish('Tipos', function(){
 	return Tipos.find();
 });
 
-Meteor.publish('Solicitudes', function(xtipo, xfecha){
+Meteor.publish('Solicitudes', function(xtipo, xfecha, xuser){
 	if (xfecha){
 
 		//console.log('xfecha:', xfecha);
@@ -16,7 +16,10 @@ Meteor.publish('Solicitudes', function(xtipo, xfecha){
 		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
 
 		//console.log(xtipo, start, end);
-		return Solicitudes.find({tipo:xtipo, 'fecha':{$gte: start, $lt: end}});
+		if (xuser.role == 'gerente' || xuser.role == 'tesorero')
+			return Solicitudes.find({tipo:xtipo, 'fecha':{$gte: start, $lt: end}});
+		else
+			return Solicitudes.find({tipo:xtipo, 'fecha':{$gte: start, $lt: end}, $or: [ {'nombre.codigo': xuser.username}, {'resp.codigo': xuser.username}, {'codsocio': xuser.username} ] });
 	}
 	else
 		return [];
