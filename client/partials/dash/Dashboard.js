@@ -17,12 +17,19 @@ Template.Dashboard.onCreated(function(){
 });
 
 Template.Dashboard.helpers({
-	solicitudes: function(){
+	mayores: function(){
 		let xfecha = Session.get('xfecha');
 		const start = moment.utc(xfecha.fecha1).startOf('day').toDate();
 		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
 
-		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}});
+		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: 'socio'});
+	},
+	menores: function(){
+		let xfecha = Session.get('xfecha');
+		const start = moment.utc(xfecha.fecha1).startOf('day').toDate();
+		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
+
+		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: {$ne: 'socio'}});
 	},
 	tipos: function(){
 		return Tipos.find();
@@ -33,13 +40,13 @@ Template.Dashboard.helpers({
 		showFilter: true,
 		fields: [
 			{key: 'num', label: 'Número', cellClass: 'user_id'},
-			{key:'tipo', label: 'Tipo'},
-			{key:'fecha', label: 'Fecha',
+			{key:'fecha', label: 'Fecha', sortOrder: 0, sortDirection: -1,
 				fn: function(value) { return moment(value).utc().format('DD/MM/YYYY'); }
 			},
 			{key:'nombre.dni', label: 'Dni'},
 			{key:'nombre.nombre', label: 'Solicitante'},
-			{key:'resp.nombre', label: 'Responsable'},
+			{key:'resp.codigo', label: 'Responsable'},
+			{key: 'codsocio', label: 'Socio'},
 			{key:'resp.area', label: 'Area'},
 			{key:'monto', label: 'Monto'},
 			{key:'moneda', label: 'Moneda'},

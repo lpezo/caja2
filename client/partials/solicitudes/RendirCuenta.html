@@ -1,0 +1,21 @@
+<template name="RendirCuenta">
+  <div class="modal" id="GrupoEdit" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <i class="fa fa-close close-edit-mode"></i>
+          <h3>Rendir Cuenta</h3>
+        </div>
+        <div class="modal-body">
+
+			<h4>{{$.Session.get 'error'}}</h4>
+			<form name="form-edit-grupo">
+      
+				<button class="btn btn-primary">Grabar</button>
+			</form>
+
+        </div>
+      </div>
+    </div>
+  </div>
+</template>

@@ -60,11 +60,24 @@
 
 	<div class="row">
 	    <div class="col-lg-12">
+	    	<h3 class="bg-info">Monto mayores</h3>
 			{{#if Template.subscriptionsReady}}
-				{{> reactiveTable collection=solicitudes settings=settings}}
+				{{> reactiveTable collection=mayores settings=settings}}
 			{{else}}
 				<p>Loading...</p>
 			{{/if}}
 	    </div>
 	</div>
+
+	<div class="row">
+	    <div class="col-lg-12">
+	    	<h3 class="bg-info">Monto menores</h3>
+			{{#if Template.subscriptionsReady}}
+				{{> reactiveTable collection=menores settings=settings}}
+			{{else}}
+				<p>Loading...</p>
+			{{/if}}
+	    </div>
+	</div>
+
 </template>

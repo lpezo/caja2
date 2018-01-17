@@ -16,6 +16,9 @@
                     {{/if}}
                     Solicitud
                     <span class="text_estado {{estadoObj.estado}}">{{estadoObj.desc}}</span>
+                    {{#if esRendirCuenta}}
+                    <button class="btn btn-warning"><i class="fa fa-money" aria-hidden="true"></i> Rendir Cuenta</button>
+                    {{/if}}
                 </div>
                 <div class="panel-body">
         <!-- {{> quickForm collection="Solicitudes" id="insertSolicitudForm" type="insert" doc=byDefault}}        -->
