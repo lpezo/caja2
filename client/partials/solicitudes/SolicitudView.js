@@ -100,3 +100,5 @@ Template.SolicitudView.events({
 		
 	}
 });
+
+

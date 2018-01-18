@@ -57,5 +57,42 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <span>Tesorería</span>
+                </div>
+                <div class="panel-body">
+                    <form> {{#with byDefault}}
+                        <div class="form-group">
+
+                            <div class="row">
+                                <div class="col-lg-3">
+                                <label for="editMonto">Monto</label>
+                                <input type="text" class="form-control" id="editMonto" value="{{monto}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                <label for="editRecibido">Recibido</label>
+                                <input type="text" class="form-control" id="editRecibido" value="{{recibido}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button class="btn btn-primary" type="submit">Enviar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    {{/with}} </form> 
+                    
+                </div>
+                <!-- /.panel body -->    
+            </div>
+            <!-- /.panel -->    
+        </div>
+        <!-- /.col -->    
+    </div>
+    <!-- /.row -->    
 </template>
 

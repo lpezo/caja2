@@ -191,12 +191,6 @@ SolicitudSchema = new SimpleSchema({
     label: 'Valor'
   },
 
-  gastado: {
-    type: String,
-    label: 'Gastado'
-  },
-
-
   moneda: {
     type: String,
     label: 'Moneda',
@@ -348,6 +342,16 @@ SolicitudSchema = new SimpleSchema({
     type: String,
     optional: true
   },
+
+  recibido: {
+    type: String,
+    label: 'Recibido'
+  },
+
+  gastado: {
+    type: String,
+    label: 'Gastado'
+  }
 
 });
 
