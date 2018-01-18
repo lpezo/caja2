@@ -96,7 +96,7 @@ Template.SolicitudView.events({
 				FlowRouter.go(Session.get('pag_ant'));
 		});
 	},
-	'click .btn-warning': function(event, template){
+	'click #btnEditarMonto': function(event, template){
 		
 	}
 });
