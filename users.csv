@@ -1,5 +1,5 @@
 username,email,name,dni,area,clave,tipo,role,accion,jefe,socio
-aacevedo,aacevedo@estudiogr.com,"ACEVEDO BLANCO, ANA CLAUDIA",10000001,area1,aacevedo,S,tesorero,u,adiaz,jcescudero
+aacevedo,aacevedo@estudiogr.com,"ACEVEDO BLANCO, ANA CLAUDIA",10000001,area1,aacevedo,S,,u,adiaz,jcescudero
 aarce,aarce@estudiogr.com,"ARCE UGARTE, AUGUSTO JOSE",10000002,area1,aarce,S,gerente,u,adiaz,jcescudero
 abazan,abazan@estudiogr.com,"BAZAN PUENTE ARNAO, ANDREA ESTEFANIA",10000003,area1,abazan,S,,u,adiaz,jcescudero
 acaceres,acaceres@estudiogr.com,"CACERES MESIAS, ANGELA PAMELA",10000004,area1,acaceres,S,,u,adiaz,jcescudero
@@ -19,7 +19,7 @@ calata,calata@estudiogr.com,"ALATA VIZCARRA, CEFERINO CHRISTIAN",10000017,area1,
 camilacastro,camilacastro@estudiogr.com,"CASTRO  YONG, CAMILA",10000018,area1,camilacastro,S,,u,adiaz,jcescudero
 carlagonzales,carlagonzales@estudiogr.com,"GONZALES LOPEZ, CARLA",10000019,area2,carlagonzales,S,,u,adiaz,jcescudero
 cassereto,cassereto@estudiogr.com,"ASSERETO GOMEZ, CARMEN ANDREA",10000020,area2,cassereto,S,,u,adiaz,jcescudero
-cavila,cavila@estudiogr.com,"AVILA ARQUEROS, CESAR",10000021,area2,cavila,S,,u,adiaz,jcescudero
+cavila,cavila@estudiogr.com,"AVILA ARQUEROS, CESAR",10000021,area2,cavila,S,,u,jgaravito,aarce
 ccastillo,ccastillo@estudiogr.com,"CASTILLO TAPIA, CARLOS",10000022,area2,ccastillo,S,,u,adiaz,jcescudero
 ccastro,ccastro@estudiogr.com,"CASTRO SALINAS, CESAR",10000023,area2,ccastro,S,,u,adiaz,jcescudero
 ccespedes,ccespedes@estudiogr.com,"CESPEDES BULEJE, CARLOS",10000024,area2,ccespedes,S,,u,adiaz,jcescudero
@@ -120,7 +120,7 @@ magramonte,magramonte@estudiogr.com,"AGRAMONTE TORRES, MARIO ALEXIS",10000118,ar
 malcantara,malcantara@estudiogr.com,"ALCANTARA CIEZA, MARIA LAURA",10000119,area4,malcantara,R,,u,adiaz,jcescudero
 mantenimiento,mantenimiento@estudiogr.com,"DE LA CRUZ JARAMILLO, EDWIN MARTIN",10000120,area4,mantenimiento,R,,u,adiaz,jcescudero
 maragaki,maragaki@estudiogr.com,"ARAGAKI NAKAHODO, AMELIA MARITE",10000121,area4,maragaki,R,,u,adiaz,jcescudero
-mavalos,mavalos@estudiogr.com,"AVALOS BALLON, MICHAEL ANTHONY",10000122,area4,mavalos,R,,u,adiaz,jcescudero
+mavalos,mavalos@estudiogr.com,"AVALOS BALLON, MICHAEL ANTHONY",10000122,area4,mavalos,R,,u,jgaravito,aarce
 mbarclay,mbarclay@estudiogr.com,"BARCLAY THORNE, MICHELLE",10000123,area4,mbarclay,R,,u,adiaz,jcescudero
 mbedoya,mbedoya@estudiogr.com,"BEDOYA UGARTE, MARTHA ESTRELLA",10000124,area4,mbedoya,R,,u,adiaz,jcescudero
 mblack,mblack@estudiogr.com,"BLACK YRAOLA, MAURICIO RICARDO",10000125,area4,mblack,R,,u,adiaz,jcescudero
@@ -193,11 +193,11 @@ thelguero,thelguero@estudiogr.com,"HELGUERO , TATIANA ROMINA",10000191,area5,the
 ucedron,ucedron@estudiogr.com,"CEDRON VILLEGAS, URSULA",10000192,area5,ucedron,R,,u,adiaz,jcescudero
 vcisneros,vcisneros@estudiogr.com,"CISNEROS TORRES, VANESSA",10000193,area5,vcisneros,R,,u,adiaz,jcescudero
 vlamadrid,vlamadrid@estudiogr.com,"LA MADRID BERNILLA, VICTOR ALEJANDRO",10000194,area5,vlamadrid,R,,u,adiaz,jcescudero
-vnarvaez,vnarvaez@estudiogr.com,"NARVAEZ FERNANDEZ, VICTOR MANUEL",10000195,area5,vnarvaez,R,,u,adiaz,jcescudero
+vnarvaez,vnarvaez@estudiogr.com,"NARVAEZ FERNANDEZ, VICTOR MANUEL",10000195,area5,vnarvaez,R,tesorero,u,adiaz,jcescudero
 vpadilla,vpadilla@estudiogr.com,"PADILLA AGUILAR, VALERIE",10000196,area5,vpadilla,R,,u,adiaz,jcescudero
 vverna,vverna@estudiogr.com,"VERNA CORONADO, VITO",10000197,area5,vverna,R,,u,adiaz,jcescudero
 ypanta,ypanta@estudiogr.com,"PANTA RAMOS, YAKELIN",10000198,area5,ypanta,R,,u,adiaz,jcescudero
-jgaravito,jgaravito@estudiogr.com,JESUS GARAVITO,10000199,area5,jgaravito,R,admin,u,adiaz,jcescudero
+jgaravito,jgaravito@estudiogr.com,JESUS GARAVITO,10000199,area5,jgaravito,R,,u,aarce,aarce
 victor.farro,victor.farro@estudiogr.com,Victor,10000200,area5,victor.farro,R,,u,jgaravito,aarce
 lpezo,lpezo@estudiogr.com,Luis Pezo,10000201,area5,lpezo,R,,u,jgaravito,aarce
 augusto.arce,augusto.arce@estudiogr.com,augusto,10000202,area5,augusto.arce,R,,u,jgaravito,aarce
