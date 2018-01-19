@@ -11,14 +11,11 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     {{#if autorizador}}
-                    <button class="btn btn-primary"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
-                    <button class="btn btn-danger"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
+                    <button class="btn btn-primary" id="btnAceptar"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
+                    <button class="btn btn-danger" id="btnCancelar"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
                     {{/if}}
                     Solicitud
                     <span class="text_estado {{estadoObj.estado}}">{{estadoObj.desc}}</span>
-                    {{#if esRendirCuenta}}
-                    <button class="btn btn-warning"><i class="fa fa-money" aria-hidden="true"></i> Rendir Cuenta</button>
-                    {{/if}}
                 </div>
                 <div class="panel-body">
         <!-- {{> quickForm collection="Solicitudes" id="insertSolicitudForm" type="insert" doc=byDefault}}        -->
@@ -57,24 +54,30 @@
         <!-- /.col-lg-12 -->
     </div>
     <!-- /.row -->
+    {{#if esDarDinero}}
     <div class="row">
         <div class="col-lg-10">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <span>Tesorería</span>
+                    <span><a name="tesoreria">Tesorería</a></span>
                 </div>
                 <div class="panel-body">
                     <form> {{#with byDefault}}
                         <div class="form-group">
-
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMoneda">Moneda</label>
+                                    <input type="text" class="form-control" name="editMoneda" value="{{moneda}}" disabled>
+                                </div>
+                            </div>
                             <div class="row">
                                 <div class="col-lg-3">
                                 <label for="editMonto">Monto</label>
-                                <input type="text" class="form-control" id="editMonto" value="{{monto}}" disabled>
+                                <input type="text" class="form-control" name="editMonto" value="{{monto}}" disabled>
                                 </div>
                                 <div class="col-lg-3">
-                                <label for="editRecibido">Recibido</label>
-                                <input type="text" class="form-control" id="editRecibido" value="{{recibido}}">
+                                <label for="editRecibido">Entregado</label>
+                                <input type="text" class="form-control" name="editRecibido" value="{{recibido}}">
                                 </div>
                             </div>
                             <div class="row">
@@ -93,6 +96,58 @@
         </div>
         <!-- /.col -->    
     </div>
+    {{/if}}
     <!-- /.row -->    
+
+    {{#if esRendirCuenta}}
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <span><a name="tesoreria">Rendir Cuenta</a></span>
+                </div>
+                <div class="panel-body">
+                    <form> {{#with byDefault}}
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMoneda">Moneda</label>
+                                    <input type="text" class="form-control" name="editMoneda" value="{{moneda}}" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMonto">Monto</label>
+                                    <input type="text" class="form-control" name="editMonto" value="{{monto}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for="editRecibido">Recibido</label>
+                                    <input type="text" class="form-control" name="editRecibido" value="{{recibido}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for="editGastado">Gastado</label>
+                                    <input type="text" class="form-control" name="editGastado" value="{{gastado}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="btnRendirCuenta">Rendir</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    {{/with}} </form> 
+                    
+                </div>
+                <!-- /.panel body -->    
+            </div>
+            <!-- /.panel -->    
+        </div>
+        <!-- /.col -->    
+    </div>
+    {{/if}}
+    <!-- /.row -->    
+
+
 </template>
 

@@ -30,14 +30,14 @@ Template.SolicitudView.helpers({
 			//return (userActual.username == solicitud.userMsg);
 
 			if (solicitud.userMsg == 'socio'){ // monto mayor
-				if (userActual.username == solicitud.codsocio)
+				if (userActual.username == solicitud.codsocio && solicitud.estado == 'A')
 					return true;
 				else
 					return false;
 			}
 			else	//monto menores
 			{
-				if (userActual.role && userActual.role == 'tesorero')
+				if (userActual.role && userActual.role == 'tesorero' && solicitud.estado == 'A')
 					return true;
 				else
 					return false;
@@ -65,11 +65,23 @@ Template.SolicitudView.helpers({
 			return {estado: sol.estado, desc: desc};
 		}
 	},
+	esDarDinero: function(){
+		let userActual = Session.get('CurrentUser');
+		let solicitud = Solicitudes.findOne(FlowRouter.getParam('id'));
+		if (solicitud){
+			if (userActual.role && userActual.role == 'tesorero' && solicitud.estado == 'A')
+				return true;
+			else
+				return false;
+		}
+		else
+			return false;
+	},
 	esRendirCuenta: function() {
 		let userActual = Session.get('CurrentUser');
 		let solicitud = Solicitudes.findOne(FlowRouter.getParam('id'));
 		if (userActual && solicitud){
-			if (solicitud.estado == 'A' && userActual.username == solicitud.nombre.codigo)
+			if (solicitud.estado == 'E' && userActual.username == solicitud.nombre.codigo)
 				return true;
 			else
 				return false;
@@ -79,8 +91,11 @@ Template.SolicitudView.helpers({
 	}
 });
 
+//jfernandez@sccourierperu.com
+
 Template.SolicitudView.events({
-	'click .btn-primary': function(event, template){
+	'click #btnAceptar': function(event, template){
+		event.preventDefault();
 		Meteor.call('aceptarRechazar', FlowRouter.getParam('id'), 'A', function(error, response){
 			if (error)
 				Session.set('error', error.reason);
@@ -88,7 +103,8 @@ Template.SolicitudView.events({
 				FlowRouter.go(Session.get('pag_ant'));
 		});
 	},
-	'click .btn-danger': function(event, template){
+	'click #btnCancelar': function(event, template){
+		event.preventDefault();
 		Meteor.call('aceptarRechazar', FlowRouter.getParam('id'), 'R', function(error, response){
 			if (error)
 				Session.set('error', error.reason);
@@ -97,7 +113,26 @@ Template.SolicitudView.events({
 		});
 	},
 	'click #btnEditarMonto': function(event, template){
-		
+		event.preventDefault();
+		let xrecibido = template.find('[name=editRecibido]').value;
+
+		if (xrecibido)
+		{
+			Solicitudes.update({_id: this._id}, {$set: {recibido: xrecibido, estado: 'E'}});
+		}
+		else
+			alert('Ingrese valor entregado');
+	},
+	'click #btnRendirCuenta': function(event, template){
+		event.preventDefault();
+		let xgastado = template.find('[name=editGastado]').value;
+
+		if (xgastado)
+		{
+			Solicitudes.update({_id: this._id}, {$set: {gastado: xgastado, estado: 'C'}});
+		}
+		else
+			alert('Ingrese valor gastado');
 	}
 });
 

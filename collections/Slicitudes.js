@@ -321,6 +321,7 @@ SolicitudSchema = new SimpleSchema({
   },
 
   estado: {
+    //tipos: N=Nada A=Aceptado E=Envio con Dinero R=Rechazado 'C'=Rendir Cuenta
     type: String,
     label: 'Estado',
     optional: true

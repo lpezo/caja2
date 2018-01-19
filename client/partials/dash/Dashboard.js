@@ -49,6 +49,8 @@ Template.Dashboard.helpers({
 			{key: 'codsocio', label: 'Socio'},
 			{key:'resp.area', label: 'Area'},
 			{key:'monto', label: 'Monto'},
+			{key:'recibido', label: 'Recibido'},
+			{key:'gastado', label: 'Gastado'},
 			{key:'moneda', label: 'Moneda'},
 			{key:'estado', label: 'Estado', fn: function(value){
 				if (value){
@@ -56,6 +58,10 @@ Template.Dashboard.helpers({
 						return new Spacebars.SafeString("<i class='icon_estado fa fa-thumbs-o-up'></i></a>");
 					else if (value == 'R')
 						return new Spacebars.SafeString("<i class='icon_estado fa fa-thumbs-o-down'></i></a>");
+					else if (value == 'E')
+						return new Spacebars.SafeString("<i class='icon_estado fa fa-money'></i></a>");					
+					else if (value == 'C')
+						return new Spacebars.SafeString("<i class='icon_estado fa fa-check'></i></a>");					
 					else
 						return '';
 				}
