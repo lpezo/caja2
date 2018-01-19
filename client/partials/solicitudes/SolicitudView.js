@@ -9,6 +9,7 @@ Template.SolicitudView.onCreated(function(){
 		//let sol = Solicitudes.findOne(FlowRouter.getParam('id'));
 		//this.SolicitudActual.set(sol);
 	});
+
 });
 
 Template.SolicitudView.helpers({
@@ -30,14 +31,14 @@ Template.SolicitudView.helpers({
 			//return (userActual.username == solicitud.userMsg);
 
 			if (solicitud.userMsg == 'socio'){ // monto mayor
-				if (userActual.username == solicitud.codsocio && solicitud.estado == 'A')
+				if (userActual.username == solicitud.codsocio && solicitud.estado == 'N')
 					return true;
 				else
 					return false;
 			}
 			else	//monto menores
 			{
-				if (userActual.role && userActual.role == 'tesorero' && solicitud.estado == 'A')
+				if (userActual.role && userActual.role == 'tesorero' && solicitud.estado == 'N')
 					return true;
 				else
 					return false;
@@ -119,6 +120,17 @@ Template.SolicitudView.events({
 		if (xrecibido)
 		{
 			Solicitudes.update({_id: this._id}, {$set: {recibido: xrecibido, estado: 'E'}});
+
+			var id = document.getElementById("content");
+			Blaze.renderWithData(Template.ReporteGasto, this, id)
+			/*
+			Blaze.saveAsPDF(Template.ReporteGasto, {
+				filename: 'ReporteGasto.pdf',
+				data: this,
+				orientation: 'landscape',
+				format: 'a4'
+			});
+			*/
 		}
 		else
 			alert('Ingrese valor entregado');

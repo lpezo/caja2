@@ -1,65 +1,12 @@
 <template name="SolicitudView">
-    <div class="row">
-        <div class="col-lg-10">
-            <h1 class="page-header">Solicitud Creada</h1>
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
     <!-- /.row -->
-    <div class="row">
-        <div class="col-lg-10">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    {{#if autorizador}}
-                    <button class="btn btn-primary" id="btnAceptar"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
-                    <button class="btn btn-danger" id="btnCancelar"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
-                    {{/if}}
-                    Solicitud
-                    <span class="text_estado {{estadoObj.estado}}">{{estadoObj.desc}}</span>
-                </div>
-                <div class="panel-body">
-        <!-- {{> quickForm collection="Solicitudes" id="insertSolicitudForm" type="insert" doc=byDefault}}        -->
-        {{#autoForm id="viewSolicitudForm" collection="Solicitudes" type="disabled" doc=byDefault}}
 
-        <div class="row">
-            <div class="col-lg-3">
-            {{> afQuickField name='num'}}
-            </div>
-        </div>
-
-        <hr/>
-
-        {{> SolicitudFields}}
-
-        {{/autoForm}}                    
-                </div>
-                <!-- /.panel-body -->
-                <div class="panel-foot">
-                    <div class="row">
-                        {{#if autorizador}}
-                        <div class="col-lg-4">
-                            <button class="btn btn-primary"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
-                            <button class="btn btn-danger"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
-                        </div>
-                        {{/if}}
-                        <div class="col-lg-2">
-                            <a class="btn btn-success" href="{{$.Session.get 'pag_ant'}}">
-                                <i class="fa fa-hand-o-left" aria-hidden="true"></i>  Regresar</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- /.panel -->
-        </div>
-        <!-- /.col-lg-12 -->
-    </div>
-    <!-- /.row -->
     {{#if esDarDinero}}
     <div class="row">
         <div class="col-lg-10">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <span><a name="tesoreria">Tesorería</a></span>
+                    <a name="tesoreria" id="tesoreria">Tesorería</a>
                 </div>
                 <div class="panel-body">
                     <form> {{#with byDefault}}
@@ -104,7 +51,7 @@
         <div class="col-lg-10">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <span><a name="tesoreria">Rendir Cuenta</a></span>
+                    <a name="rendir" id="rendir">Rendir Cuenta</a>
                 </div>
                 <div class="panel-body">
                     <form> {{#with byDefault}}
@@ -147,6 +94,60 @@
     </div>
     {{/if}}
     <!-- /.row -->    
+
+
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    {{#if autorizador}}
+                    <button class="btn btn-primary" id="btnAceptar"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
+                    <button class="btn btn-danger" id="btnCancelar"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
+                    {{/if}}
+                    <h4>Solicitud</h4>
+                    <span class="text_estado {{estadoObj.estado}}">{{estadoObj.desc}}</span>
+                </div>
+                <div class="panel-body">
+        <!-- {{> quickForm collection="Solicitudes" id="insertSolicitudForm" type="insert" doc=byDefault}}        -->
+        {{#autoForm id="viewSolicitudForm" collection="Solicitudes" type="disabled" doc=byDefault}}
+
+        <div class="row">
+            <div class="col-lg-3">
+            {{> afQuickField name='num'}}
+            </div>
+        </div>
+
+        <hr/>
+
+        {{> SolicitudFields}}
+
+        {{/autoForm}}                    
+                </div>
+                <!-- /.panel-body -->
+                <div class="panel-foot">
+                    <div class="row">
+                        {{#if autorizador}}
+                        <div class="col-lg-4">
+                            <button class="btn btn-primary"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
+                            <button class="btn btn-danger"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
+                        </div>
+                        {{/if}}
+                        <div class="col-lg-2">
+                            <a class="btn btn-success" href="{{$.Session.get 'pag_ant'}}">
+                                <i class="fa fa-hand-o-left" aria-hidden="true"></i>  Regresar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+
+    <div id="content" class="row">
+
+    </div>
 
 
 </template>

@@ -346,12 +346,14 @@ SolicitudSchema = new SimpleSchema({
 
   recibido: {
     type: String,
-    label: 'Recibido'
+    label: 'Recibido',
+    optional: true
   },
 
   gastado: {
     type: String,
-    label: 'Gastado'
+    label: 'Gastado',
+    optional: true
   }
 
 });

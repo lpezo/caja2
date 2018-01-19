@@ -96,7 +96,12 @@ Template.Dashboard.events({
 	    //console.log('solicitud:', solicitud);	
 	    if (event.target.className == 'user_id'){
 	    	Session.set('pag_ant', '/dashboard');
-	    	FlowRouter.go('/Solicitud/' + solicitud._id);
+	    	if (solicitud.estado == 'A')
+	    		FlowRouter.go('/Solicitud/' + solicitud._id + '#tesoreria');
+	    	else if (solicitud.estado == 'E')
+	    		FlowRouter.go('/Solicitud/' + solicitud._id + '#rendir');
+	    	else
+	    		FlowRouter.go('/Solicitud/' + solicitud._id);
 	    }
     },
 	
