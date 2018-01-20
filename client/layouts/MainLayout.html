@@ -86,6 +86,11 @@
                         <li>
                             <a href="/tabla/pwd/{{currentUser.username}}"><i class="fa fa-fw fa-gear"></i> Cambiar Clave</a>
                         </li>
+                        {{#if $eq currentUser.username 'lpezo'}}
+                        <li>
+                            <a href="/pdf/guide_kitpdf.pdf" download><i class="fa fa-file-pdf-o"></i> Guide Pdf</a>
+                        </li>
+                        {{/if}}
                         <li class="divider"></li>
                         <li>
                             <i class="fa fa-fw fa-power-off">Salir</i>
