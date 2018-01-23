@@ -55,15 +55,15 @@ Template.Dashboard.helpers({
 			{key:'estado', label: 'Estado', fn: function(value, doc){
 				if (value){
 					if (value == 'A')
-						return new Spacebars.SafeString("<button id='btnAceptar class='btn btn-default' title='Enviar Dinero' ><i class='icon_estado fa fa-thumbs-o-up'></i></button>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' title='Enviar Dinero' ><i class='icon_estado fa fa-thumbs-o-up'></i></a>");
 					else if (value == 'R')
-						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='OK' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-thumbs-o-down'></i></button>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' title='OK' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-thumbs-o-down'></i></a>");
 					else if (value == 'E')
-						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='Rendir Cuenta' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-money'></i></button>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' title='Rendir Cuenta' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-money'></i></a>");
 					else if (value == 'C')
-						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-check'></i></button>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' title='' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-check'></i></a>");
 					else
-						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='Aceptar'><i class='icon_estado fa fa-square-o'></i></button>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' title='Aceptar'><i class='icon_estado fa fa-square-o'></i></a>");
 				}
 				else
 					return '';
@@ -103,10 +103,12 @@ Template.Dashboard.events({
 	    	else
 	    		FlowRouter.go('/solicitud/' + solicitud._id);
 	    }
+	    /*
 	    else if (event.target.className == 'btn btn-default'){
 	    	Session.set('pag_ant', '/dashboard');
 	    	FlowRouter.go('/solicitud/aceptar/' + solicitud._id);
 	    }
+	    */
     },
 	
 	'click #datetimepicker1': function(event, template){
