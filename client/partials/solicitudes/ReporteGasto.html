@@ -1,5 +1,8 @@
 <template name="ReporteGasto">
 
+<div class="row">
+<div class="col-lg-10">
+<h1>Reporte</h1>
 <div class="panel panel-info">
     <div class="panel-heading">
         <center><h3>PLANILLA POR GASTOS DE MOVILIDAD</h3></center>
@@ -29,6 +32,7 @@
               <th class="tg-yw4l">Costo Area<br></th>
               <th class="tg-yw4l">Costo Estudio<br></th>
             </tr>
+            {{#with data}}
             <tr>
               <td class="tg-yw4l">{{fechaDate}}</td>
               <td class="tg-yw4l">{{nombre.nombre}}</td>
@@ -43,8 +47,12 @@
               <td class="tg-yw4l"></td>
               <td class="tg-yw4l"></td>
             </tr>
+            {{/with}}
           </table>  
   </div>
+</div>
+
+</div>
 </div>
 
 </template>

@@ -52,18 +52,18 @@ Template.Dashboard.helpers({
 			{key:'recibido', label: 'Recibido'},
 			{key:'gastado', label: 'Gastado'},
 			{key:'moneda', label: 'Moneda'},
-			{key:'estado', label: 'Estado', fn: function(value){
+			{key:'estado', label: 'Estado', fn: function(value, doc){
 				if (value){
 					if (value == 'A')
-						return new Spacebars.SafeString("<i class='icon_estado fa fa-thumbs-o-up'></i></a>");
+						return new Spacebars.SafeString("<button id='btnAceptar class='btn btn-default' title='Enviar Dinero' ><i class='icon_estado fa fa-thumbs-o-up'></i></button>");
 					else if (value == 'R')
-						return new Spacebars.SafeString("<i class='icon_estado fa fa-thumbs-o-down'></i></a>");
+						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='OK' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-thumbs-o-down'></i></button>");
 					else if (value == 'E')
-						return new Spacebars.SafeString("<i class='icon_estado fa fa-money'></i></a>");					
+						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='Rendir Cuenta' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-money'></i></button>");
 					else if (value == 'C')
-						return new Spacebars.SafeString("<i class='icon_estado fa fa-check'></i></a>");					
+						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-check'></i></button>");
 					else
-						return '';
+						return new Spacebars.SafeString("<button id='btnAceptar' class='btn btn-default' title='Aceptar'><i class='icon_estado fa fa-square-o'></i></button>");
 				}
 				else
 					return '';
@@ -97,11 +97,15 @@ Template.Dashboard.events({
 	    if (event.target.className == 'user_id'){
 	    	Session.set('pag_ant', '/dashboard');
 	    	if (solicitud.estado == 'A')
-	    		FlowRouter.go('/Solicitud/' + solicitud._id + '#tesoreria');
+	    		FlowRouter.go('/solicitud/' + solicitud._id + '#tesoreria');
 	    	else if (solicitud.estado == 'E')
-	    		FlowRouter.go('/Solicitud/' + solicitud._id + '#rendir');
+	    		FlowRouter.go('/solicitud/' + solicitud._id + '#rendir');
 	    	else
-	    		FlowRouter.go('/Solicitud/' + solicitud._id);
+	    		FlowRouter.go('/solicitud/' + solicitud._id);
+	    }
+	    else if (event.target.className == 'btn btn-default'){
+	    	Session.set('pag_ant', '/dashboard');
+	    	FlowRouter.go('/solicitud/aceptar/' + solicitud._id);
 	    }
     },
 	
