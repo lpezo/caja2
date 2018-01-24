@@ -19,6 +19,7 @@ Template.Usuarios.helpers({
 			{key:'email', label: 'Email'},
 			{key:'dni', label: 'Dni'},
 			{key:'area', label: 'Area'},
+			{key:'role', label: 'Role'}
 		]};
 	}
 

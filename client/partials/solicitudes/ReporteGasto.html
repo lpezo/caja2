@@ -1,13 +1,16 @@
 <template name="ReporteGasto">
 
 <div class="row">
-<div class="col-lg-10">
+<div class="col-lg-12">
 <h1>Reporte</h1>
 <div class="panel panel-info">
     <div class="panel-heading">
         <center><h3>PLANILLA POR GASTOS DE MOVILIDAD</h3></center>
     </div>
     <div class="panel-body">
+          <span>
+            Estado: {{data.estado}}
+          </span>
           <style type="text/css">
           .tg  {border-collapse:collapse;border-spacing:0;border-color:#aaa;}
           .tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;border-color:#aaa;color:#333;background-color:#fff;}
@@ -49,16 +52,133 @@
               <td class="tg-yw4l">{{monto}}</td>
               <td class="tg-yw4l">{{recibido}}</td>
               <td class="tg-yw4l">{{gastado}}</td>
-              <td class="tg-yw4l"></td>
-              <td class="tg-yw4l"></td>
-              <td class="tg-yw4l"></td>
+              <td class="tg-yw4l">{{#if $eq costo 'R'}}X{{/if}}</td>
+              <td class="tg-yw4l">{{#if $eq costo 'A'}}X{{/if}}</td>
+              <td class="tg-yw4l">{{#if $eq costo 'C'}}X{{/if}}</td>
             </tr>
             {{/with}}
           </table>  
   </div>
+  <div class="panel-foot">
+    <div class="row">
+        <div class="col-lg-2">
+            <a class="btn btn-success" href="{{$.Session.get 'pag_ant'}}">
+                <i class="fa fa-hand-o-left" aria-hidden="true"></i>  Regresar</a>
+        </div>
+    </div>
+</div>
 </div>
 
 </div>
 </div>
+
+<div class="row">
+<div class="col-lg-10">
+  {{#if autorizador}}
+  <button class="btn btn-primary" id="btnAceptar"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> Aceptar</button>
+  <button class="btn btn-danger" id="btnCancelar"><i class="fa fa-thumbs-o-down" aria-hidden="true"></i> Rechazar</button>
+  {{/if}}
+</div>
+</div>
+
+
+    {{#if esDarDinero}}
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a name="tesoreria" id="tesoreria">Tesorería</a>
+                </div>
+                <div class="panel-body">
+                    <form> {{#with data}}
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMoneda">Moneda</label>
+                                    <input type="text" class="form-control" name="editMoneda" value="{{moneda}}" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                <label for="editMonto">Monto</label>
+                                <input type="text" class="form-control" name="editMonto" value="{{monto}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                <label for="editRecibido">Entregado</label>
+                                <input type="text" class="form-control" name="editRecibido" value="{{recibido}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="btnEditarMonto">Enviar</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    {{/with}} </form> 
+                    
+                </div>
+                <!-- /.panel body -->    
+
+            </div>
+            <!-- /.panel -->    
+        </div>
+        <!-- /.col -->    
+    </div>
+    {{/if}}
+    <!-- /.row -->    
+
+    {{#if esRendirCuenta}}
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a name="rendir" id="rendir">Rendir Cuenta</a>
+                </div>
+                <div class="panel-body">
+                    <form> {{#with data}}
+                        <div class="form-group">
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMoneda">Moneda</label>
+                                    <input type="text" class="form-control" name="editMoneda" value="{{moneda}}" disabled>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                    <label for="editMonto">Monto</label>
+                                    <input type="text" class="form-control" name="editMonto" value="{{monto}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for="editRecibido">Recibido</label>
+                                    <input type="text" class="form-control" name="editRecibido" value="{{recibido}}" disabled>
+                                </div>
+                                <div class="col-lg-3">
+                                    <label for="editGastado">Gastado</label>
+                                    <input type="text" class="form-control" name="editGastado" value="{{gastado}}">
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="btnRendirCuenta">Rendir</button>
+                                </div>
+                            </div>
+
+                        </div>
+                    {{/with}} </form> 
+                    
+                </div>
+                <!-- /.panel body -->    
+            </div>
+            <!-- /.panel -->    
+        </div>
+        <!-- /.col -->    
+    </div>
+    {{/if}}
+    <!-- /.row -->    
+
+
+
+
 
 </template>

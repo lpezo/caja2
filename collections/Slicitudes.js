@@ -354,6 +354,12 @@ SolicitudSchema = new SimpleSchema({
     type: String,
     label: 'Gastado',
     optional: true
+  },
+
+  cerrado: {
+    type: Boolean,
+    label: 'Cerrado',
+    optional: true
   }
 
 });

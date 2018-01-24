@@ -13,6 +13,8 @@ Template.Dashboard.onCreated(function(){
 		self.subscribe('Solicitudes', Session.get('xtipo'), Session.get('xfecha'), Session.get('CurrentUser'));
 		self.subscribe('Tipos');
 
+		Session.set('pag_ant', '/dashboard');
+
 	});
 });
 
@@ -35,6 +37,8 @@ Template.Dashboard.helpers({
 		return Tipos.find();
 	},
 	settings: function() {
+		let usuario = Session.get('CurrentUser');
+		let estesorero = usuario.role && usuario.role == 'tesorero';
 	return {
 		rowsPerPage: 20,
 		showFilter: true,
@@ -68,6 +72,16 @@ Template.Dashboard.helpers({
 				else
 					return '';
 
+			}},
+			{key: 'cerrado', label: 'Cerrado', fn: function(value, doc){
+				if (doc.estado == 'C' && estesorero){
+					if (!value)
+						return new Spacebars.SafeString("<a class='btn btn-primary' title='Cerrar' >Cerrar</a>");
+					else
+						return new Spacebars.SafeString("<a class='btn btn-default' title='Cerrado' disabled ><i class='fa fa-check'></i></a>");
+				}
+				else
+					return "";
 			}}
 		]};
 	},
@@ -92,6 +106,7 @@ Template.Dashboard.events({
 	'click .reactive-table tbody tr': function (event) {
 	    //event.preventDefault();
 	    var solicitud = this;
+
 	    // checks if the actual clicked element has the class `delete`
 	    //console.log('solicitud:', solicitud);	
 	    if (event.target.className == 'user_id'){
@@ -103,6 +118,11 @@ Template.Dashboard.events({
 	    	else
 	    		FlowRouter.go('/solicitud/' + solicitud._id);
 	    }
+	    else if (event.target.className == 'btn btn-primary'){
+	    	if (confirm('Esta seguro de cerrar'))
+	    		Solicitudes.update({_id:solicitud._id}, {$set: {cerrado: true}});
+		}
+
 	    /*
 	    else if (event.target.className == 'btn btn-default'){
 	    	Session.set('pag_ant', '/dashboard');
