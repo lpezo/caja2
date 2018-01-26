@@ -16,6 +16,14 @@ Template.ReporteGasto.helpers({
 			data.origen = data.lugar && data.lugar.length ? data.lugar[0].org : '';
 			data.destino = data.lugar && data.lugar.length ? data.lugar[0].dest : '';
 			data.hora = moment(data.fecha).utc().format('HH:mm');
+
+			if (data.recibido && data.gastado)
+			{
+				let frecibido = parseFloat(data.recibido);
+				let fgastado = parseFloat(data.gastado);
+				data.dif = Meteor.Util.strFormat((frecibido - fgastado).toString());
+			}
+
 		}
 		return data;
 	},
@@ -109,6 +117,7 @@ Template.ReporteGasto.events({
 
 			var id = document.getElementById("content");
 			Blaze.renderWithData(Template.ReporteGasto, this, id)
+			
 			/*
 			Blaze.saveAsPDF(Template.ReporteGasto, {
 				filename: 'ReporteGasto.pdf',

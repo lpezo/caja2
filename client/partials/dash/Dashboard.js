@@ -23,15 +23,21 @@ Template.Dashboard.helpers({
 		let xfecha = Session.get('xfecha');
 		const start = moment.utc(xfecha.fecha1).startOf('day').toDate();
 		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
-
-		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: 'socio'});
+		let xcerrado = false;
+		if (Session.get('xtodos'))
+			xcerrado = Session.get('xtodos') == 'checked';
+		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: 'socio', 
+			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]});
 	},
 	menores: function(){
 		let xfecha = Session.get('xfecha');
 		const start = moment.utc(xfecha.fecha1).startOf('day').toDate();
 		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
-
-		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: {$ne: 'socio'}});
+		let xcerrado = false;
+		if (Session.get('xtodos'))
+			xcerrado = Session.get('xtodos') == 'checked';
+		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: {$ne: 'socio'}, 
+			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]});
 	},
 	tipos: function(){
 		return Tipos.find();
@@ -99,7 +105,6 @@ Template.Dashboard.helpers({
 Template.Dashboard.events({
 	'click #item' : function(event, template) {
 		let xfech = Session.get('xfecha');
-		console.log('item:', this, xfech);
 		template.subscribe('Solicitudes', this.name, xfech, Session.get('CurrentUser'));
 		Session.set('xtipo', this.name);
 	},
@@ -197,6 +202,15 @@ Template.Dashboard.events({
 
 		window.open(encodeURI('data:text/csv;charset=utf-8,' + str));
 
+
+	 },
+
+	 'click #chkTodos': (event, template) => {
+	 	var xcheck = event.currentTarget.checked;
+	 	Session.set('xtodos', xcheck ? 'checked' : '');
+
+		let xfech = Session.get('xfecha');
+		template.subscribe('Solicitudes', this.name, xfech, Session.get('CurrentUser'));
 
 	 }
 
