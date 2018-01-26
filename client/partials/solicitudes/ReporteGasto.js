@@ -104,6 +104,7 @@ Template.ReporteGasto.events({
 
 		if (xrecibido)
 		{
+			xrecibido = Meteor.Util.strFormat(xrecibo);
 			Solicitudes.update({_id: this._id}, {$set: {recibido: xrecibido, estado: 'E'}});
 
 			var id = document.getElementById("content");
@@ -126,6 +127,7 @@ Template.ReporteGasto.events({
 
 		if (xgastado)
 		{
+			xgastado = Meteor.Util.strFormat(xgastado);
 			Solicitudes.update({_id: this._id}, {$set: {gastado: xgastado, estado: 'C'}});
 		}
 		else

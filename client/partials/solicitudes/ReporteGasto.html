@@ -30,10 +30,6 @@
               <th class="tg-yw4l">Partida<br></th>
               <th class="tg-yw4l">Destino<br></th>
               <th class="tg-yw4l">Hora</th>
-              <th class="tg-ym4l">Moneda</th>
-              <th class="tg-yw4l">Importe</th>
-              <th class="tg-yw4l">Recibido</th>
-              <th class="tg-yw4l">Gastado</th>
               <th class="tg-yw4l">Refact</th>
               <th class="tg-yw4l">Costo Area<br></th>
               <th class="tg-yw4l">Costo Estudio<br></th>
@@ -48,16 +44,32 @@
               <td class="tg-yw4l">{{origen}}</td>
               <td class="tg-yw4l">{{destino}}</td>
               <td class="tg-yw4l">{{hora}}</td>
-              <td class="tg-yw4l">{{moneda}}</td>
-              <td class="tg-yw4l">{{monto}}</td>
-              <td class="tg-yw4l">{{recibido}}</td>
-              <td class="tg-yw4l">{{gastado}}</td>
               <td class="tg-yw4l">{{#if $eq costo 'R'}}X{{/if}}</td>
               <td class="tg-yw4l">{{#if $eq costo 'A'}}X{{/if}}</td>
               <td class="tg-yw4l">{{#if $eq costo 'C'}}X{{/if}}</td>
             </tr>
             {{/with}}
           </table>  
+          <br/>
+          <table class="tg">
+            <tr>
+              <th class="tg-ym4l">Moneda</th>
+              <th class="tg-yw4l">Importe</th>
+              <th class="tg-yw4l">Recibido</th>
+              <th class="tg-yw4l">Gastado</th>
+            </tr>
+            {{#with data}}
+            <tr>
+              <td class="tg-yw4l">{{moneda}}</td>
+              <td class="tg-yw4l">{{monto}}</td>
+              <td class="tg-yw4l">{{recibido}}</td>
+              <td class="tg-yw4l">{{gastado}}</td>
+            </tr>
+            {{/with}}
+          </table>  
+
+
+
   </div>
   <div class="panel-foot">
     <div class="row">

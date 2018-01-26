@@ -142,6 +142,10 @@ AutoForm.hooks({
                 if (usu.socio)
                     doc.codsocio = usu.socio;
 
+                if (doc.monto){
+                    doc.monto = Meteor.Util.strFormat(doc.monto);
+                }
+
                 var self = this;
                 let year = doc.fecha.getFullYear().toString();
                 Meteor.call('getNum', doc.tipo, year, xtipo, function(error, response){
