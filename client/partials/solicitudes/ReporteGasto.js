@@ -141,6 +141,19 @@ Template.ReporteGasto.events({
 		}
 		else
 			alert('Ingrese valor gastado');
+	},
+
+	'click #btnPdf': (event, template) => {
+
+		Meteor.call('ReporteGasto', 1, function(error, response){
+			//window.open("data:application/pdf;base64, " + response);
+			var iframe = template.find("[name=framepdf]");
+			//console.log(response);
+			console.log("data:application/pdf;base64, " + response);
+			if (iframe)
+				iframe.src = "data:application/pdf;base64, " + response;
+		});
 	}
+
 });
 

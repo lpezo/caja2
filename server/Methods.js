@@ -1,3 +1,6 @@
+import { Base64 } from 'meteor/ostrio:base64';
+//const nativeB64 = new base64({ useNative: true });
+
 Meteor.methods({
 	/*
 	toggleAdmin(id) {
@@ -300,7 +303,19 @@ Meteor.methods({
 
      	return Solicitudes.find({'nombre.codigo': username});
      	//, 'fecha':{$gte: start, $lt: end}});
-     }
+     },
+
+     ReporteGasto: function(id){
+     	var doc = new PDFDocument({size: 'A4', margin: 50});
+		doc.fontSize(12);
+		doc.text('PDFKit is simple', 10, 30, {align: 'center', width: 200});
+
+		return Base64.encode(doc.outputSync());
+		doc.writeSync(process.env.PWD + '/public/pdf/unpdf.pdf');
+		//return doc.outputSync();
+		
+	  }
+
 
 
 });
