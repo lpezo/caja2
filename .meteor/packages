@@ -61,6 +61,6 @@ themeteorchef:bert
 
 u2622:persistent-session
 dburles:spacebars-tohtml
-pascoual:pdfkit
+#pascoual:pdfkit
 
-cosmos:browserify
+#cosmos:browserify

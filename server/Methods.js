@@ -1,7 +1,8 @@
+/*
 var PdfTable = require('voilab-pdf-table'),
     PdfDocument = require('pdfkit'),
     fitColumn = require('voilab-pdf-table/plugins/fitcolumn');
-
+*/
 Meteor.methods({
 	/*
 	toggleAdmin(id) {
@@ -304,8 +305,8 @@ Meteor.methods({
 
      	return Solicitudes.find({'nombre.codigo': username});
      	//, 'fecha':{$gte: start, $lt: end}});
-     },
-
+     }
+     /*
      ReporteGasto: function(id){
      	var doc = new PDFDocument({size: 'A4', margin: 50});
 		doc.fontSize(12);
@@ -372,7 +373,7 @@ Meteor.methods({
 		return doc.outputSync();
 		
 	  }
-
+	*/
 
 
 });
