@@ -63,4 +63,4 @@ u2622:persistent-session
 dburles:spacebars-tohtml
 pascoual:pdfkit
 
-ostrio:base64
+cosmos:browserify

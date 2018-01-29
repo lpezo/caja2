@@ -1,3 +1,5 @@
+Blob = require('blob-util');
+
 Template.ReporteGasto.onCreated(function(){
 	var self = this;
 	this.autorun(()=> {
@@ -149,9 +151,13 @@ Template.ReporteGasto.events({
 			//window.open("data:application/pdf;base64, " + response);
 			var iframe = template.find("[name=framepdf]");
 			//console.log(response);
-			console.log("data:application/pdf;base64, " + response);
-			if (iframe)
-				iframe.src = "data:application/pdf;base64, " + response;
+			//console.log("data:application/pdf;base64, " + response);
+			Blob.arrayBufferToBlob(response, 'application/pdf').then(function(blob){
+				var blobURL = Blob.createObjectURL(blob);
+				console.log(blobURL);
+				if (iframe)
+					iframe.src = blobURL;
+			});
 		});
 	}
 
