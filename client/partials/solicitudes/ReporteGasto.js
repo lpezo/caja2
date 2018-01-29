@@ -1,4 +1,4 @@
-Blob = require('blob-util');
+//Blob = require('blob-util');
 
 Template.ReporteGasto.onCreated(function(){
 	var self = this;
@@ -143,7 +143,8 @@ Template.ReporteGasto.events({
 		}
 		else
 			alert('Ingrese valor gastado');
-	},
+	}
+	/*,
 
 	'click #btnPdf': (event, template) => {
 
@@ -160,6 +161,6 @@ Template.ReporteGasto.events({
 			});
 		});
 	}
-
+	*/
 });
 
