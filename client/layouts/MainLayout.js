@@ -43,7 +43,7 @@ Template.MainLayout.helpers({
 });
 
 Template.MainLayout.events({
-	'click .fa-power-off': function() {
+	'click .logout': function() {
 
 		//console.log('click .fa-power-off');
 		//AccountsTemplates.logout();

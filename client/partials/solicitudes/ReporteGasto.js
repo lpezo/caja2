@@ -108,6 +108,7 @@ Template.ReporteGasto.events({
 				FlowRouter.go(Session.get('pag_ant'));
 		});
 	},
+	/*
 	'click #btnEditarMonto': function(event, template){
 		event.preventDefault();
 		let xrecibido = template.find('[name=editRecibido]').value;
@@ -120,18 +121,11 @@ Template.ReporteGasto.events({
 			var id = document.getElementById("content");
 			Blaze.renderWithData(Template.ReporteGasto, this, id)
 			
-			/*
-			Blaze.saveAsPDF(Template.ReporteGasto, {
-				filename: 'ReporteGasto.pdf',
-				data: this,
-				orientation: 'landscape',
-				format: 'a4'
-			});
-			*/
 		}
 		else
 			alert('Ingrese valor entregado');
 	},
+	*/
 	'click #btnRendirCuenta': function(event, template){
 		event.preventDefault();
 		let xgastado = template.find('[name=editGastado]').value;

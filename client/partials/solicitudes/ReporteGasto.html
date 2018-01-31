@@ -105,6 +105,7 @@
                     <a name="tesoreria" id="tesoreria">Tesorería</a>
                 </div>
                 <div class="panel-body">
+                  <!--
                     <form> {{#with data}}
                         <div class="form-group">
                             <div class="row">
@@ -131,7 +132,29 @@
 
                         </div>
                     {{/with}} </form> 
-                    
+                  -->
+                  {{#autoForm id="tesoreriaSolicitudForm" collection="Solicitudes" type="update" doc=data validation="submit"}}
+                            <div class="row">
+                                <div class="col-lg-3">
+                                  {{> afQuickField name='moneda' disabled=true}}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-lg-3">
+                                  {{> afQuickField name='monto' disabled=true}}
+                                </div>
+                                <div class="col-lg-3">
+                                  {{> afQuickField name='recibido' optional=false }}
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div>
+                                    <button class="btn btn-primary" type="submit" id="btnEditarMonto">Enviar</button>
+                                </div>
+                            </div>
+
+                  {{/autoForm}}
+
                 </div>
                 <!-- /.panel body -->    
 
