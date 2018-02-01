@@ -360,8 +360,9 @@ SolicitudSchema = new SimpleSchema({
     type: Boolean,
     label: 'Cerrado',
     optional: true
-  },
+  }
 
+/*
   recibidoPor: {
     type: String,
     label: 'Recibido Por',
@@ -369,7 +370,8 @@ SolicitudSchema = new SimpleSchema({
     autoform: {
       afFieldInput: autocomplete
     }
-  },
+  }
+  */
 
 });
 

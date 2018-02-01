@@ -1,5 +1,3 @@
-//Blob = require('blob-util');
-
 Template.ReporteGasto.onCreated(function(){
 	var self = this;
 	this.autorun(()=> {
@@ -108,24 +106,30 @@ Template.ReporteGasto.events({
 				FlowRouter.go(Session.get('pag_ant'));
 		});
 	},
-	/*
 	'click #btnEditarMonto': function(event, template){
 		event.preventDefault();
 		let xrecibido = template.find('[name=editRecibido]').value;
 
 		if (xrecibido)
 		{
-			xrecibido = Meteor.Util.strFormat(xrecibo);
+			xrecibido = Meteor.Util.strFormat(xrecibido);
 			Solicitudes.update({_id: this._id}, {$set: {recibido: xrecibido, estado: 'E'}});
 
 			var id = document.getElementById("content");
 			Blaze.renderWithData(Template.ReporteGasto, this, id)
 			
+			/*
+			Blaze.saveAsPDF(Template.ReporteGasto, {
+				filename: 'ReporteGasto.pdf',
+				data: this,
+				orientation: 'landscape',
+				format: 'a4'
+			});
+			*/
 		}
 		else
 			alert('Ingrese valor entregado');
 	},
-	*/
 	'click #btnRendirCuenta': function(event, template){
 		event.preventDefault();
 		let xgastado = template.find('[name=editGastado]').value;
@@ -137,8 +141,7 @@ Template.ReporteGasto.events({
 		}
 		else
 			alert('Ingrese valor gastado');
-	}
-	/*,
+	},
 
 	'click #btnPdf': (event, template) => {
 
@@ -146,15 +149,11 @@ Template.ReporteGasto.events({
 			//window.open("data:application/pdf;base64, " + response);
 			var iframe = template.find("[name=framepdf]");
 			//console.log(response);
-			//console.log("data:application/pdf;base64, " + response);
-			Blob.arrayBufferToBlob(response, 'application/pdf').then(function(blob){
-				var blobURL = Blob.createObjectURL(blob);
-				console.log(blobURL);
-				if (iframe)
-					iframe.src = blobURL;
-			});
+			console.log("data:application/pdf;base64," + response);
+			if (iframe)
+				iframe.src = "data:application/pdf;base64," + response;
 		});
 	}
-	*/
+
 });
 
