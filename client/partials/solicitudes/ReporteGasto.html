@@ -58,6 +58,7 @@
               <th class="tg-yw4l">Recibido</th>
               <th class="tg-yw4l">Gastado</th>
               <th class="tg-yw4l">Devolución</th>
+              <th class="tg-yw4l">Recibido Por</th>
             </tr>
             {{#with data}}
             <tr>
@@ -66,6 +67,7 @@
               <td class="tg-yw4l">{{recibido}}</td>
               <td class="tg-yw4l">{{gastado}}</td>
               <td class="tg-yw4l">{{dif}}</td>
+              <td class="tg-yw4l">{{recibidoPor}}</td>
             </tr>
             {{/with}}
           </table>  
@@ -105,6 +107,7 @@
                     <a name="tesoreria" id="tesoreria">Tesorería</a>
                 </div>
                 <div class="panel-body">
+                  <!--
                     <form> {{#with data}}
                         <div class="form-group">
                             <div class="row">
@@ -131,8 +134,8 @@
 
                         </div>
                     {{/with}} </form> 
-                    <!--
-                  {{#autoForm id="tesoreriaSolicitudForm" collection="Solicitudes" type="update" doc=data validation="submit"}}
+                    -->
+                  {{#autoForm id="tesoreriaSolicitudForm" collection="Solicitudes" type="update" doc=dataDarDinero validation="submit"}}
                             <div class="row">
                                 <div class="col-lg-3">
                                   {{> afQuickField name='moneda' disabled=true}}
@@ -147,16 +150,26 @@
                                 </div>
                             </div>
                             <div class="row">
+                                <div class="col-lg-6">
+                                  {{> afQuickField name='recibidoPor' }}
+                                </div>
+                            </div>
+                            <div class="row">
                                 <div>
                                     <button class="btn btn-primary" type="submit" id="btnEditarMonto">Enviar</button>
                                 </div>
                             </div>
 
                   {{/autoForm}}
-                  -->
 
                 </div>
                 <!-- /.panel body -->    
+
+                <div class="panel-foot">
+                    <div class="alert alert-danger">
+                        {{$.Session.get 'error'}}
+                    </div>                    
+                </div>
 
             </div>
             <!-- /.panel -->    
@@ -214,6 +227,39 @@
     </div>
     {{/if}}
     <!-- /.row -->    
+
+    {{#if auditar}}
+    <div class="row">
+        <div class="col-lg-10">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <a name="rendir" id="rendir">Auditar</a>
+                </div>
+                <div class="panel-body">
+                  <div class="row">
+                    {{#with data}}
+                    <div class="btn-group btn-group-lg">
+                      <button type="button" id="aud_nada" 
+                        class="btn btn-default"><i class="fa fa-ban"></i> Nada</button>
+                      <button type="button" id="aud_ok"
+                        class="btn {{#if $eq auditado 'OK'}}btn-success{{else}}btn-default{{/if}}">
+                          <i class="fa fa-check"></i> OK</button>
+                      <button type="button" id="aud_obs"
+                        class="btn {{#if $eq auditado 'OBS'}}btn-danger{{else}}btn-default{{/if}}">
+                        <i class="fa fa-times"></i> Obs</button>
+                    </div> 
+                    {{/with}}
+                  </div>
+                </div>
+                <!-- /.panel body -->    
+            </div>
+            <!-- /.panel -->    
+        </div>
+        <!-- /.col -->    
+    </div>
+    {{/if}}
+    <!-- /.row --> 
+
 
     <!--
     <hr/>

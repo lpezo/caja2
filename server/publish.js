@@ -16,7 +16,7 @@ Meteor.publish('Solicitudes', function(xtipo, xfecha, xuser){
 		const end = moment.utc(xfecha.fecha2).endOf('day').toDate();
 
 		//console.log(xtipo, start, end);
-		if (xuser.role == 'gerente' || xuser.role == 'tesorero' || xuser.role == 'admin')
+		if (xuser.role == 'gerente' || xuser.role == 'tesorero' || xuser.role == 'admin' || xuser.role == 'auditor')
 			return Solicitudes.find({tipo:xtipo, 'fecha':{$gte: start, $lt: end}});
 		else 
 			return Solicitudes.find({tipo:xtipo, 'fecha':{$gte: start, $lt: end}, $or: [ {'nombre.codigo': xuser.username}, {'resp.codigo': xuser.username}, {'codsocio': xuser.username} ] });

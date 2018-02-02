@@ -15,6 +15,8 @@ Template.Dashboard.onCreated(function(){
 
 		Session.set('pag_ant', '/dashboard');
 
+		Session.set('error', '');
+
 	});
 });
 
@@ -53,7 +55,6 @@ Template.Dashboard.helpers({
 			{key:'fecha', label: 'Fecha', sortOrder: 0, sortDirection: -1,
 				fn: function(value) { return moment(value).utc().format('DD/MM/YYYY'); }
 			},
-			{key:'nombre.dni', label: 'Dni'},
 			{key:'nombre.nombre', label: 'Solicitante'},
 			{key:'resp.codigo', label: 'Responsable'},
 			{key: 'codsocio', label: 'Socio'},
@@ -61,6 +62,15 @@ Template.Dashboard.helpers({
 			{key:'monto', label: 'Monto'},
 			{key:'recibido', label: 'Recibido'},
 			{key:'gastado', label: 'Gastado'},
+			{key: 'dif', label: 'Dif', fn: function(value, data){
+				if (data.recibido && data.gastado){
+					let frecibido = parseFloat(data.recibido);
+					let fgastado = parseFloat(data.gastado);
+					return Meteor.Util.strFormat((frecibido - fgastado).toString());
+				}
+				else
+					return "";
+			}},
 			{key:'moneda', label: 'Moneda'},
 			{key:'estado', label: 'Estado', fn: function(value, doc){
 				if (value){
@@ -79,12 +89,30 @@ Template.Dashboard.helpers({
 					return '';
 
 			}},
-			{key: 'cerrado', label: 'Cerrado', fn: function(value, doc){
-				if (doc.estado == 'C' && estesorero){
-					if (!value)
-						return new Spacebars.SafeString("<a class='btn btn-primary' title='Cerrar' >Cerrar</a>");
+			{key:'auditado', label: 'Audit', fn: function(value, doc){
+				if (value){
+					if (value == 'OK')
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-success' ><i class='icon_estado fa fa-check'></i></a>");
+					else if (value == 'OBS')
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-danger' href='/solicitud/aceptar/" + doc._id + "'><i class='icon_estado fa fa-times'></i></a>");
 					else
-						return new Spacebars.SafeString("<a class='btn btn-default' title='Cerrado' disabled ><i class='fa fa-check'></i></a>");
+						return new Spacebars.SafeString("<a href='/solicitud/aceptar/" + doc._id + "'' class='btn btn-default' ><i class='icon_estado fa fa-square-o'></i></a>");
+				}
+				else
+					return '';
+
+			}},
+			{key: 'cerrado', label: 'Cerrado', fn: function(value, doc){
+				if (doc.estado == 'C'){
+					if (!value)
+					{
+						if (estesorero)
+							return new Spacebars.SafeString("<a class='btn btn-primary' title='Cerrar' >Cerrar</a>");
+						else
+							return "";
+					}
+					else
+						return new Spacebars.SafeString("<a class='btn btn-default' title='Cerrado' disabled ><i class='icon_estado fa fa-check'></i></a>");
 				}
 				else
 					return "";

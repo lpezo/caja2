@@ -4,6 +4,7 @@ Template.ReporteGasto.onCreated(function(){
 		Session.set('error', '');
 		var id = FlowRouter.getParam('id');
 		self.subscribe('Solicitud', id);
+		self.subscribe('autocompletUsers');
 	});
 });
 
@@ -24,7 +25,16 @@ Template.ReporteGasto.helpers({
 				data.dif = Meteor.Util.strFormat((frecibido - fgastado).toString());
 			}
 
+
+
 		}
+		return data;
+	},
+	'dataDarDinero': function(){
+		var id = FlowRouter.getParam('id');
+		var data = Solicitudes.findOne(id);
+		if (data)
+			data.recibidoPor = data.nombre.nombre;
 		return data;
 	},
 	autorizador: function(){
@@ -83,6 +93,13 @@ Template.ReporteGasto.helpers({
 		}
 		else
 			return false;
+	},
+	auditar: function() {
+		let userActual = Session.get('CurrentUser');
+		if (userActual.role && userActual.role == 'auditor'){
+			return true;
+		}
+		return false;
 	}
 });
 
@@ -106,6 +123,7 @@ Template.ReporteGasto.events({
 				FlowRouter.go(Session.get('pag_ant'));
 		});
 	},
+	/*
 	'click #btnEditarMonto': function(event, template){
 		event.preventDefault();
 		let xrecibido = template.find('[name=editRecibido]').value;
@@ -118,18 +136,11 @@ Template.ReporteGasto.events({
 			var id = document.getElementById("content");
 			Blaze.renderWithData(Template.ReporteGasto, this, id)
 			
-			/*
-			Blaze.saveAsPDF(Template.ReporteGasto, {
-				filename: 'ReporteGasto.pdf',
-				data: this,
-				orientation: 'landscape',
-				format: 'a4'
-			});
-			*/
 		}
 		else
 			alert('Ingrese valor entregado');
 	},
+	*/
 	'click #btnRendirCuenta': function(event, template){
 		event.preventDefault();
 		let xgastado = template.find('[name=editGastado]').value;
@@ -153,7 +164,39 @@ Template.ReporteGasto.events({
 			if (iframe)
 				iframe.src = "data:application/pdf;base64," + response;
 		});
+	},
+
+	'click #aud_nada': () => {
+		let id = FlowRouter.getParam('id');
+		Solicitudes.update(id, {$set: {auditado: ''}});
+	},
+
+	'click #aud_ok': () => {
+		let id = FlowRouter.getParam('id');
+		Solicitudes.update(id, {$set: {auditado: 'OK'}});
+	},
+
+	'click #aud_obs': () => {
+		let id = FlowRouter.getParam('id');
+		Solicitudes.update(id, {$set: {auditado: 'OBS'}});	
 	}
 
 });
 
+AutoForm.hooks({
+    tesoreriaSolicitudForm: {
+        onError: function(formType, error){
+            if (error){
+                console.log('error:', error.message);
+                Session.set('error:', error.message);
+            }
+        },
+        before:{
+            update: function(doc){
+            	doc.$set.recibido = Meteor.Util.strFormat(doc.$set.recibido);
+            	doc.$set.estado = 'E';
+            	return doc;
+        	}
+        }
+    }
+});
