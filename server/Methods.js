@@ -1,8 +1,8 @@
-/*
 var PdfTable = require('voilab-pdf-table'),
     PdfDocument = require('pdfkit'),
-    fitColumn = require('voilab-pdf-table/plugins/fitcolumn');
-*/
+    fitColumn = require('voilab-pdf-table/plugins/fitcolumn'),
+	fs = require('fs');
+
 Meteor.methods({
 	/*
 	toggleAdmin(id) {
@@ -305,11 +305,14 @@ Meteor.methods({
 
      	return Solicitudes.find({'nombre.codigo': username});
      	//, 'fecha':{$gte: start, $lt: end}});
-     }
-     /*
+     },
+     
      ReporteGasto: function(id){
-     	var doc = new PDFDocument({size: 'A4', margin: 50});
+     	var doc = new PdfDocument({size: 'A4', margin: 50});
+     	doc.pipe(fs.createWriteStream('out.pdf'));
 		doc.fontSize(12);
+		doc.info['Title'] = 'Reporte de Gasto';
+		doc.info['Author'] = 'Luis Pezo';
 		//doc.text('PDFKit is simple', 10, 30, {align: 'center', width: 200});
 
 		//return Base64.encode(doc.outputSync());
@@ -368,12 +371,11 @@ Meteor.methods({
             .onPageAdded(function (tb) {
                 tb.addHeader();
             });
-
 		
-		return doc.outputSync();
+		//return doc.outputSync();
+		doc.end();
+	  	return;
 		
 	  }
-	*/
-
 
 });

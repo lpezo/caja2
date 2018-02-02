@@ -156,13 +156,12 @@ Template.ReporteGasto.events({
 
 	'click #btnPdf': (event, template) => {
 
-		Meteor.call('ReporteGasto', 1, function(error, response){
-			//window.open("data:application/pdf;base64, " + response);
-			var iframe = template.find("[name=framepdf]");
-			//console.log(response);
-			console.log("data:application/pdf;base64," + response);
-			if (iframe)
-				iframe.src = "data:application/pdf;base64," + response;
+		event.preventDefault();
+		Meteor.call('ReporteGasto', FlowRouter.getParam('id'), function(error, response){
+			if (error)
+				console.log('error:', error);
+			else
+				alert('Generado!');
 		});
 	},
 
