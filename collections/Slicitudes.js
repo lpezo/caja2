@@ -375,6 +375,12 @@ SolicitudSchema = new SimpleSchema({
     autoform: {
       afFieldInput: autocomplete
     }
+  },
+
+  img: {
+    type: String,
+    label: 'Img',
+    optional: true
   }
 
 });

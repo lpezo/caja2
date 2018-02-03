@@ -5,6 +5,7 @@ Template.ReporteGasto.onCreated(function(){
 		var id = FlowRouter.getParam('id');
 		self.subscribe('Solicitud', id);
 		self.subscribe('autocompletUsers');
+		this.dataUrl = new ReactiveVar();
 	});
 });
 
@@ -100,7 +101,10 @@ Template.ReporteGasto.helpers({
 			return true;
 		}
 		return false;
-	}
+	},
+	'imageUrl': function(){
+  		return Template.instance().dataUrl.get();
+  	}
 });
 
 
@@ -178,7 +182,23 @@ Template.ReporteGasto.events({
 	'click #aud_obs': () => {
 		let id = FlowRouter.getParam('id');
 		Solicitudes.update(id, {$set: {auditado: 'OBS'}});	
-	}
+	},
+
+	'change input[type="file"]': function(event,template){
+	    var files=event.target.files;
+	    if(files.length===0){
+	      return;
+	    }
+	    var file=files[0];
+	    //
+	    var fileReader=new FileReader();
+	    fileReader.onload=function(event){
+	      var dataUrl=event.target.result;
+	      template.dataUrl.set(dataUrl);
+	    };
+	    fileReader.readAsDataURL(file);
+  	}
+
 
 });
 
@@ -192,7 +212,9 @@ AutoForm.hooks({
         },
         before:{
             update: function(doc){
+            	//console.log(this.event.currentTarget.img.src);
             	doc.$set.recibido = Meteor.Util.strFormat(doc.$set.recibido);
+            	doc.$set.img = this.event.currentTarget.img.src;
             	doc.$set.estado = 'E';
             	return doc;
         	}

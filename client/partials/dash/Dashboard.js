@@ -3,6 +3,8 @@ Template.Dashboard.onCreated(function(){
 	this.autorun(() => {
 		if (!Session.get('xtipo'))
 			Session.set('xtipo', 'movil');
+		if (!Session.get('xarea'))
+			Session.set('xarea', '');
 		if (!Session.get('xfecha')){
 			let hoy = new Date();
 			let ant = new Date(hoy);
@@ -12,6 +14,7 @@ Template.Dashboard.onCreated(function(){
 
 		self.subscribe('Solicitudes', Session.get('xtipo'), Session.get('xfecha'), Session.get('CurrentUser'));
 		self.subscribe('Tipos');
+		self.subscribe('Areas');
 
 		Session.set('pag_ant', '/dashboard');
 
@@ -28,8 +31,14 @@ Template.Dashboard.helpers({
 		let xcerrado = false;
 		if (Session.get('xtodos'))
 			xcerrado = Session.get('xtodos') == 'checked';
-		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: 'socio', 
-			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]});
+
+		let query = {tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: 'socio', 
+			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]};
+		let xarea = Session.get('xarea');
+		if (xarea)
+			query['nombre.area'] = xarea;
+
+		return Solicitudes.find(query);
 	},
 	menores: function(){
 		let xfecha = Session.get('xfecha');
@@ -38,11 +47,18 @@ Template.Dashboard.helpers({
 		let xcerrado = false;
 		if (Session.get('xtodos'))
 			xcerrado = Session.get('xtodos') == 'checked';
-		return Solicitudes.find({tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: {$ne: 'socio'}, 
-			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]});
+		let query = {tipo:Session.get('xtipo'), fecha:{$gte:start, $lt:end}, userMsg: {$ne: 'socio'}, 
+			$or: [{cerrado: {$exists: 0}}, {cerrado: xcerrado}]};
+		let xarea = Session.get('xarea');
+		if (xarea)
+			query['nombre.area'] = xarea;
+		return Solicitudes.find(query);
 	},
 	tipos: function(){
 		return Tipos.find();
+	},
+	areas: function(){
+		return Areas.find();
 	},
 	settings: function() {
 		let usuario = Session.get('CurrentUser');
@@ -58,7 +74,7 @@ Template.Dashboard.helpers({
 			{key:'nombre.nombre', label: 'Solicitante'},
 			{key:'resp.codigo', label: 'Responsable'},
 			{key: 'codsocio', label: 'Socio'},
-			{key:'resp.area', label: 'Area'},
+			{key:'nombre.area', label: 'Area'},
 			{key:'monto', label: 'Monto'},
 			{key:'recibido', label: 'Recibido'},
 			{key:'gastado', label: 'Gastado'},
@@ -135,6 +151,9 @@ Template.Dashboard.events({
 		let xfech = Session.get('xfecha');
 		template.subscribe('Solicitudes', this.name, xfech, Session.get('CurrentUser'));
 		Session.set('xtipo', this.name);
+	},
+	'click #name': function(event, template) {
+		Session.set('xarea', this.name);
 	},
 	'click .reactive-table tbody tr': function (event) {
 	    //event.preventDefault();

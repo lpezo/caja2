@@ -71,8 +71,15 @@
             </tr>
             {{/with}}
           </table>  
-
-
+          <br/>
+          <table class="tg">
+            <tr>
+              <th class="tg-ym4l">FIRMA</th>
+            </tr>
+            <tr>
+              <td class="tg-yw4l"><img name="imgshow" src="{{data.img}}" /></td>
+            </tr>
+          </table>
 
   </div>
   <div class="panel-foot">
@@ -144,6 +151,12 @@
                                 <div class="col-lg-3">
                                   {{> afQuickField name='moneda' disabled=true}}
                                 </div>
+                                <div class="col-lg-3">
+                                </div>
+                                <div class="col-lg-3">
+                                  <label for="imageFile">Firma</label>
+                                  <input type="file" name="imageFile" id="imageFile">
+                                </div>
                             </div>
                             <div class="row">
                                 <div class="col-lg-3">
@@ -151,6 +164,9 @@
                                 </div>
                                 <div class="col-lg-3">
                                   {{> afQuickField name='recibido' optional=false }}
+                                </div>
+                                <div class="col-lg-6">
+                                  <img name="img" id="img" src={{imageUrl}} />
                                 </div>
                             </div>
                             <div class="row">
