@@ -24,6 +24,7 @@ Meteor.methods({
 	parseUpload( data ) {
 		check( data, Array );
 
+		let nombreAnterior = '';
 		for ( let i = 0; i < data.length; i++ ) {
 			/*
 		  let item   = data[ i ],
@@ -40,12 +41,17 @@ Meteor.methods({
 
 		  if (!item.nombre){
 		  	//return "No existe campo nombre";
-		  	if (item.nombre == '')
-		  		return;
-		  	throw new Meteor.Error(404, "No existe campo nombre");
+		  	//if (item.nombre == '')
+		  	//	return;
+			  //throw new Meteor.Error(404, "No existe campo nombre");
+			  if (item.contacto)
+			  	Clientes.update({nombre: nombreAnterior}, {$push: {contacto: item.contacto}});
+			  continue;
 		  }
-		  if (!item.descripcion)
-		  	throw new Meteor.Error(404, "No existe campo descripcion");
+		  else
+		  	nombreAnterior = item.nombre;
+		  //if (!item.descripcion)
+		  //	throw new Meteor.Error(404, "No existe campo descripcion");
 
 		  if (!item.accion)
 		  	item.accion = '1';
@@ -53,7 +59,8 @@ Meteor.methods({
 		  let exists = Clientes.findOne({nombre: item.nombre});
 		  if (item.accion == '1' || item.accion == 'i'){
 			if (!exists)
-				Clientes.insert({nombre: item.nombre, descripcion: item.descripcion});
+				Clientes.insert({nombre: item.nombre, descripcion: item.descripcion, responsable: item.responsable, 
+					contacto: [item.contacto], categoria: item.categoria});
 		  }
 		  else if (item.accion == '0' || item.accion == 'x'){
 		  	if (exists)

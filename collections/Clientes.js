@@ -22,9 +22,19 @@ ClienteSchema = new SimpleSchema({
 		type: String,
 		label: 'Descripción'
 	},
+	responsable: {
+		type: String,
+		label: 'Responsable',
+		optional: true
+	},
 	contacto: {
 		type: [String],
 		label: 'Contacto',
+		optional: true
+	},
+	categoria: {
+		type: String,
+		label: 'Categoria',
 		optional: true
 	}
 });
