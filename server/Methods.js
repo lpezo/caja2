@@ -92,7 +92,6 @@ Meteor.methods({
 		  //if (!item.accion)
 		  //	item.accion = '1';
 
-
 		  let accion = item.accion;
 		  delete item.accion;
 

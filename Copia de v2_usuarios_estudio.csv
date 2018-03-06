@@ -1,0 +1,227 @@
+name,username,jefe,socio,email,dni,area,role,accion,tipo
+"AQUINO ACHULLI, VIRGINIA",mesadepartes,jessica.dextre,augusto.arce,mesadepartes@cms-grau.com,42261177,admin,,1,S
+"ARCE UGARTE, AUGUSTO JOSE",augusto.arce,augusto.arce,augusto.arce,augusto.arce@cms-grau.com,25771193,admin,gerente,1,S
+"DE LA CRUZ JARAMILLO, EDWIN MARTIN",mantenimiento,augusto.arce,augusto.arce,mantenimiento@cms-grau.com,9514986,admin,,1,S
+"DEL ROSARIO QUIROZ, CINTHYA FLOR",cinthya.delrosario,augusto.arce,augusto.arce,cinthya.delrosario@cms-grau.com,42257476,admin,,1,S
+"FLORES VERAMENDI, DALILA",dalila.flores,augusto.arce,augusto.arce,dalila.flores@cms-grau.com,7363377,admin,,1,S
+"GRANDEZ PALOMINO, TONY MICHEL",tony.grandez,augusto.arce,augusto.arce,j.g@cms-grau.com,41876616,admin,,1,S
+"JIMENEZ VEGA, JOSE RICARDO",jose.jimenez,miguel.grau,augusto.arce,x@xx.com,9263878,admin,,1,S
+"JUAREZ SOTELO, FERMIN",fermin.juarez,yakelin.panta,augusto.arce,fermin.juarez@cms-grau.com,8535474,admin,,1,S
+"MUÑOZ VELASQUEZ, FLOR DE MARIA",recepcion.clientes,augusto.arce,augusto.arce,recepcion.clientes@cms-grau.com,46335607,admin,,1,S
+"NINA JIHUALLANCCA, JONNY YEVERS",jonny.nina,mantenimiento,augusto.arce,x@xx.com,47541157,admin,,1,S
+"REYNA MENDOZA, JOEL",joel.reyna,mantenimiento,augusto.arce,x@xx.com,74731409,admin,,1,S
+"TORRES ENCISO, ERASMO",erasmo.torres,mantenimiento,augusto.arce,x@xx.com,8794355,admin,,1,S
+"CESPEDES BULEJE, CARLOS",carlos.cespedes,deborath.bendrell,augusto.arce,carlos.cespedes@cms-grau.com,10047801,admin,,1,S
+"ALEJOS GUZMAN, OSCAR ALBERTO",oscar.alejos,ramon.huapaya,ramon.huapaya,oscar.alejos@cms-grau.com,45859945,admin,,1,S
+"ATTILANO FLORES, DIANA VERONICA",diana.attilano,ramon.huapaya,ramon.huapaya,diana.attilano@cms-grau.com,47818868,admin,,1,S
+"SHIMABUKURO TOKASHIKI, NESTOR RAUL",nestor.shimabukuro,ramon.huapaya,ramon.huapaya,nestor.shimabukuro@cms-grau.com,41379326,admin,,1,S
+"ORREGO RODRIGUEZ CADILLA, SEBASTIAN",sebastian.orrego,ramon.huapaya,ramon.huapaya,sebastian.orrego@cms-grau.com,74061958,admin,,1,S
+"SANEZ POLICARPO, ANDRES SANTIAGO",andres.sanez,ramon.huapaya,ramon.huapaya,andres.sanez@cms-grau.com,70114539,admin,,1,S
+"HUAPAYA TAPIA, RAMON ALBERTO",ramon.huapaya,ramon.huapaya,ramon.huapaya,ramon.huapaya@cms-grau.com,40086784,admin,,1,S
+"KOEHNE O'CONNOR, DENISSE",denisse.koehne,miguel.mena,miguel.mena,denisse.koehne@cms-grau.com,42712439,aero,,1,S
+"MENA RAMIREZ, MIGUEL",miguel.mena,miguel.mena,miguel.mena,miguel.mena@cms-grau.com,7592388,aero,,1,S
+"ARRIARAN NUÑEZ, RAMIRO HERNAN",ramiro.arriaran,vito.verna,vito.verna,ramiro.arriaran@cms-grau.com,41179094,amb,,1,S
+"LA MADRID BERNILLA, VICTOR ALEJANDRO",victor.lamadrid,vito.verna,vito.verna,victor.lamadrid@cms-grau.com,46042933,amb,,1,S
+"ROJAS VASQUEZ, PIERO AMADEUS",piero.rojas,vito.verna,vito.verna,piero.rojas@cms-grau.com,47174354,amb,,1,S
+"GUERRERO  PAZ SOLDAN, GUILLERMO ANTONIO",guillermo.guerrero,vito.verna,vito.verna,guillermo.guerrero@cms-grau.com,46415976,amb,,1,S
+"GONZALES ASCENCIOS, LUCIA MACIEL",lucia.gonzales,vito.verna,vito.verna,lucia.gonzales@cms-grau.com,74498370,amb,,1,S
+"RIVERA YALAN, SERGIO",sergio.rivera,vito.verna,vito.verna,sergio.rivera@cms-grau.com,46657439,amb,,1,S
+"SAM MEOÑO, MOLLY",molly.sam,vito.verna,vito.verna,molly.sam@cms-grau.com,72628114,amb,,1,S
+"BARBOZA ACUÑA, MARIA SALOME",maria.barboza,vito.verna,vito.verna,maria.barboza@cms-grau.com,72634661,amb,,1,S
+"MORA ZAMBRANO, KEVIN ERNESTO",kevin.mora,vito.verna,vito.verna,kevin.mora@cms-grau.com,73889666,amb,,1,S
+"RODRIGUEZ ALVAREZ, MURIEL JOCELYN",muriel.rodriguez,vito.verna,vito.verna,muriel.rodriguez@cms-grau.com,75095656,amb,,1,S
+"SANCHEZ GARCIA, SAMANTHA LUCIA",samantha.sanchez,vito.verna,vito.verna,samantha.sanchez@cms-grau.com,71655550,amb,,1,S
+"SONTGERATH LENZ, INA ANNABEL",annabel.sontgerath,vito.verna,vito.verna,annabel.sontgerath@cms-grau.com,C73TG608V,amb,,1,S
+"BAILETTI MC GREGOR, DIANA GIANNINA",giannina.bailetti,vito.verna,vito.verna,giannina.bailetti@cms-grau.com,9858751,amb,,1,S
+"CARBAJAL PONCE DE RIVERA, PAOLA",paola.carbajal,vito.verna,vito.verna,paola.carbajal@cms-grau.com,29634724,amb,,1,S
+"VERNA CORONADO, VITO",vito.verna,vito.verna,vito.verna,vito.verna@cms-grau.com,9866301,amb,,1,S
+"CAQUI SOTELO, MIGUEL ANGEL",miguel.caqui,norma.quispe,cesar.castro,miguel.caqui@cms-grau.com,40967366,arch,,1,S
+"HUAMANI SALINAS, REYNALDO JORGE",jorge.huamani,norma.quispe,cesar.castro,jorge.huamani@cms-grau.com,7436528,arch,,1,S
+"QUISPE HUAMANI, NORMA",norma.quispe,cesar.castro,cesar.castro,norma.quispe@cms-grau.com,9643460,arch,,1,S
+"ROLDAN GALA, KARIN VANESSA",karin.roldan,norma.quispe,cesar.castro,karin.roldan@cms-grau.com,41254158,arch,,1,S
+"SALAZAR HERNANDEZ, EDER",eder.salazar,norma.quispe,cesar.castro,eder.salazar@cms-grau.com,43625767,arch,,1,S
+"ZAVALA BRACAMONTE, ALEXANDER",alexander.zavala,norma.quispe,cesar.castro,alexander.zavala@cms-grau.com,41500770,arch,,1,S
+"GONZALES CUSTODIO, BERTHA",bertha.gonzales,augusto.arce,augusto.arce,bertha.gonzales@cms-grau.com,8415420,cobra,,1,S
+"PANTA RAMOS, YAKELIN",yakelin.panta,augusto.arce,augusto.arce,yakelin.panta@cms-grau.com,44850927,cobra,,1,S
+"CHICOMA TUESTA, SANDRA ANFLOR",sandra.chicoma,mariadelia.oxley,mariadelia.oxley,sandra.chicoma@cms-grau.com,41000789,compe,,1,S
+"ZUÑIGA PARODI, MARIA DEL ROSARIO",mariadelrosario.zuniga,mariadelia.oxley,mariadelia.oxley,mariadelrosario.zuniga@cms-grau.com,45137834,compe,,1,S
+"TORRES HURTADO, SANDRA KARINA",sandra.torres,mariadelia.oxley,mariadelia.oxley,sandra.torres@cms-grau.com,72892984,compe,,1,S
+"OXLEY PAZ, MARIA DELIA",mariadelia.oxley,mariadelia.oxley,mariadelia.oxley,mariadelia.oxley@cms-grau.com,9853487,compe,,1,S
+"JIMENEZ VARGAS-MACHUCA, ROXANA",roxana.jimenez,juancarlos.escudero,juancarlos.escudero,roxana.jimenez@cms-grau.com,8769742,consu,,1,S
+"ORTEGA PIANA, MARCO ANTONIO",marcoantonio.ortega,juancarlos.escudero,juancarlos.escudero,marcoantonio.ortega@cms-grau.com,10272444,consu,,1,S
+"DEXTRE SILVA, JESSICA MARIBEL",jessica.dextre,augusto.arce,augusto.arce,jessica.dextre@cms-grau.com,40540160,conta,,1,S
+"GOMEZ BARRIENTOS, DENYSE NICOLE",digitacion.contabilidad,jessica.dextre,augusto.arce,digitacion.contabilidad@cms-grau.com,73903578,conta,,1,S
+"MARQUEZ SANCHEZ, JESUS EDUARDO",jesus.marquez,jessica.dextre,augusto.arce,jesus.marquez@cms-grau.com,45244057,conta,,1,S
+"NARVAEZ FERNANDEZ, NORMA SOLEDAD",norma.narvaez,jessica.dextre,augusto.arce,norma.narvaez@cms-grau.com,9027621,conta,auditor,1,S
+"TORRES TORRE, GLORIA ANTONIA",gloria.torres,jessica.dextre,augusto.arce,gloria.torres@cms-grau.com,10084131,conta,,1,S
+"VERA LOPEZ, JUNIOR ADALBERTO",junior.vera,jessica.dextre,augusto.arce,junior.vera@cms-grau.com,47206068,conta,,1,S
+"VILLENA CORTEGANA, NIUXA SUHEY",niuxa.villena,jessica.dextre,augusto.arce,niuxa.villena@cms-grau.com,73213010,conta,,1,S
+"ASSERETO GOMEZ, CARMEN ANDREA",carmen.assereto,juancarlos.escudero,juancarlos.escudero,carmen.assereto@cms-grau.com,70322204,corpo,,1,S
+"ATARAMA CANO, GUSTAVO ARTURO",gustavo.atarama,juancarlos.escudero,juancarlos.escudero,gustavo.atarama@cms-grau.com,40045527,corpo,,1,S
+"CALDERON CARDENAS, CARLOS ALFREDO",carlos.calderon,juancarlos.escudero,juancarlos.escudero,carlos.calderon@cms-grau.com,41678193,corpo,,1,S
+"CARPIO HINOJOSA, LUCERO",lucero.carpio,juancarlos.escudero,juancarlos.escudero,lucero.carpio@cms-grau.com,47734739,corpo,,1,S
+"CASTRO TAVERA, MADELAINE IVETTE",madelaine.castro,juancarlos.escudero,juancarlos.escudero,madelaine.castro@cms-grau.com,45603950,corpo,,1,S
+"DE LASA LARREA, CAMILA PATRICIA",camila.delasa,juancarlos.escudero,juancarlos.escudero,camila.delasa@cms-grau.com,45737000,corpo,,1,S
+"ONANDIA OSORES, JOSE ANTONIO",joseantonio.onandia,juancarlos.escudero,juancarlos.escudero,joseantonio.onandia@cms-grau.com,43987162,corpo,,1,S
+"PANDURO DEXTRE, JOSE EDUARDO",jose.panduro,juancarlos.escudero,juancarlos.escudero,jose.panduro@cms-grau.com,42866792,corpo,,1,S
+"VALENZUELA  RAMIREZ, GABRIELLA SHERYL",gabriella.valenzuela,juancarlos.escudero,juancarlos.escudero,gabriella.valenzuela@cms-grau.com,44703691,corpo,,1,S
+"VALLE VERA, OMAR JESUS",omar.valle,juancarlos.escudero,juancarlos.escudero,omar.valle@cms-grau.com,45631168,corpo,,1,S
+"VIALE LEO, MIGUEL",miguel.viale,juancarlos.escudero,juancarlos.escudero,miguel.viale@cms-grau.com,41497300,corpo,,1,S
+"NUÑEZ CARVALLO, JAVIER",javier.nunez,juancarlos.escudero,juancarlos.escudero,javier.nunez@cms-grau.com,9177969,corpo,,1,S
+"DA SILVA FLORES, BARBARA GRACIELA",barbara.dasilva,juancarlos.escudero,juancarlos.escudero,barbara.dasilva@cms-grau.com,74138378,corpo,,1,S
+"GARCIA SILVA-SANTISTEBAN, DANIELA",daniela.garcia,juancarlos.escudero,juancarlos.escudero,daniela.garcia@cms-grau.com,73135999,corpo,,1,S
+"LANATA DAVILA, MATEO",mateo.lanata,juancarlos.escudero,juancarlos.escudero,mateo.lanata@cms-grau.com,75510686,corpo,,1,S
+"MORENO MACHIN, VALERIA CAMILA",valeria.moreno,juancarlos.escudero,juancarlos.escudero,valeria.moreno@cms-grau.com,72317134,corpo,,1,S
+"RIOS COSME, SOLANGE NANCY",solange.rios,juancarlos.escudero,juancarlos.escudero,solange.rios@cms-grau.com,70810650,corpo,,1,S
+"ALATA VIZCARRA, CEFERINO CHRISTIAN",christian.alata,juancarlos.escudero,juancarlos.escudero,christian.alata@cms-grau.com,9823343,corpo,,1,S
+"BARTUREN VIDARTE, LUIS FRANCISCO",luis.barturen,juancarlos.escudero,juancarlos.escudero,luis.barturen@cms-grau.com,7010162,corpo,,1,S
+"NINA JIHUALLANCCA, JOSE LUIS",jose.nina,juancarlos.escudero,juancarlos.escudero,jose.nina@cms-grau.com,40218960,corpo,,1,S
+"GARCIA CHANG, MARIA ROSA",mariarosa.garcia,juancarlos.escudero,juancarlos.escudero,mariarosa.garcia@cms-grau.com,7715625,corpo,,1,S
+"MALCA ALVARIÑO, OLGA ROSARIO",olga.malca,juancarlos.escudero,juancarlos.escudero,olga.malca@cms-grau.com,9874983,corpo,,1,S
+"ESCUDERO VELANDO, JUAN CARLOS",juancarlos.escudero,juancarlos.escudero,juancarlos.escudero,juancarlos.escudero@cms-grau.com,8273043,corpo,,1,S
+"GAJATE BENAVIDES, CAROLINA",carolina.gajate,juancarlos.escudero,juancarlos.escudero,carolina.gajate@cms-grau.com,40845452,corpo,,1,S
+"OQUENDO HERAUD, SERGIO",sergio.oquendo,juancarlos.escudero,juancarlos.escudero,sergio.oquendo@cms-grau.com,7774103,corpo,,1,S
+"BARRON VELIS, FRANCISCO JOSE ARTURO",francisco.barron,juancarlos.escudero,juancarlos.escudero,francisco.barron@cms-grau.com,8227311,derecho,,1,S
+"MARTINEZ MONJA, JOSE JAVIER",jose.martinez,francisco.barron,juancarlos.escudero,jose.martinez@cms-grau.com,47516099,derecho,,1,S
+"DE ITA MORALES, CAROLINA",carolina.deita,augusto.arce,augusto.arce,carolina.deita@cms-grau.com,41014764,factura,,1,S
+"ESPINOZA GUILLERMO, RICARDO DE LA PAZ",ricardo.espinoza,carolina.deita,augusto.arce,ricardo.espinoza@cms-grau.com,76602078,factura,,1,S
+"HUAMANI GUTIERREZ, JESUS GIOVANNI",jesus.huamani,carolina.deita,augusto.arce,jesus.huamani@cms-grau.com,40356150,factura,,1,S
+"TARAZONA SILVA, EDUARDO DANIEL",eduardo.tarazona,carolina.deita,augusto.arce,eduardo.tarazona@cms-grau.com,46624835,factura,,1,S
+"ZOROGASTUA LOPEZ, CLAUDIO ALONSO",claudio.zorogastua,carolina.deita,augusto.arce,claudio.zorogastua@cms-grau.com,70158334,factura,,1,S
+"BEST LLOSA, LUIS FERNANDO",luis.best,michelle.barclay,michelle.barclay,luis.best@cms-grau.com,46989197,infra,,1,S
+"CEDRON VILLEGAS, URSULA",ursula.cedron,michelle.barclay,michelle.barclay,ursula.cedron@cms-grau.com,41359605,infra,,1,S
+"FARRO CUYA, VICTOR MANUEL JORGE",victor.farro,michelle.barclay,michelle.barclay,victor.farro@cms-grau.com,6788598,infra,,1,S
+"PINZAS ARROSPIDE, CAROLINA",carolina.pinzas,michelle.barclay,michelle.barclay,carolina.pinzas@cms-grau.com,41368875,infra,,1,S
+"ESCALA PEREZ-REYES, IVANNA ERIKA",ivanna.escala,michelle.barclay,michelle.barclay,ivanna.escala@cms-grau.com,47544548,infra,,1,S
+"MONTAGNE GARCIA BELAUNDE, ELIANA",eliana.montagne,michelle.barclay,michelle.barclay,eliana.montagne@cms-grau.com,75821132,infra,,1,S
+"SIGUENZA CHAVEZ, DANIEL",daniel.siguenza,michelle.barclay,michelle.barclay,daniel.siguenza@cms-grau.com,73208630,infra,,1,S
+"BARCLAY THORNE, MICHELLE",michelle.barclay,michelle.barclay,michelle.barclay,michelle.barclay@cms-grau.com,10064724,infra,,1,S
+"VILLAFRANQUI RIVERA, GIANCARLO JOSE",giancarlo.villafranqui,michelle.barclay,michelle.barclay,giancarlo.villafranqui@cms-grau.com,7882023,infra,,1,S
+"CAMACHO CARO, PATRICIA ALEJANDRA",patricia.camacho,raul.ravina,raul.ravina,patricia.camacho@cms-grau.com,43583878,inmob,,1,S
+"CENTENO CHAUPIS, LUIS ENRIQUE",luis.centeno,raul.ravina,raul.ravina,luis.centeno@cms-grau.com,40714442,inmob,,1,S
+"FLORES ZORRILLA, EDWIN",edwin.flores,raul.ravina,raul.ravina,edwin.flores@cms-grau.com,28289774,inmob,,1,S
+"GRANDA RUIZ, ALBERTO JOSE MARIANO",alberto.granda,raul.ravina,raul.ravina,alberto.granda@cms-grau.com,"	09539251",inmob,,1,S
+"KASTNER HERRERA, ERICH",erich.kastner,raul.ravina,raul.ravina,erich.kastner@cms-grau.com,9433139,inmob,,1,S
+"PONCE ZEGARRA, EDWARD",edward.ponce,raul.ravina,raul.ravina,edward.ponce@cms-grau.com,10420162,inmob,,1,S
+"PUERTAS VILLAVICENCIO, GONZALO",gonzalo.puertas,raul.ravina,raul.ravina,gonzalo.puertas@cms-grau.com,70215093,inmob,,1,S
+"ROJAS MONTES, ROBERTH CIRO",roberth.rojas,raul.ravina,raul.ravina,roberth.rojas@cms-grau.com,9900661,inmob,,1,S
+"TARAZONA ANGELES, GERMAN DE JESUS",german.tarazona,raul.ravina,raul.ravina,german.tarazona@cms-grau.com,10610511,inmob,,1,S
+"GONZALES DE LA COTERA CHAMOCHUMBI, ALVARO",alvaro.gonzales,raul.ravina,raul.ravina,alvaro.gonzales@cms-grau.com,76945603,inmob,,1,S
+"MAGUIÑA QUIROZ, RAUL ALONSO",alonso.maguina,raul.ravina,raul.ravina,alonso.maguina@cms-grau.com,43297121,inmob,,1,S
+"PACHECO PAJUELO, LUIS FELIPE",luis.pacheco,raul.ravina,raul.ravina,luis.pacheco@cms-grau.com,71581828,inmob,,1,S
+"QUEVEDO MELENDEZ, RUBEN FERNANDO",ruben.quevedo,raul.ravina,raul.ravina,ruben.quevedo@cms-grau.com,47101850,inmob,,1,S
+"CHAVEZ AMES, ANA JIMENA",ana.chavez,raul.ravina,raul.ravina,ana.chavez@cms-grau.com,73063105,inmob,,1,S
+"FERNANDEZ RIVERA, KATHERINE SURELLA",katherine.fernandez,raul.ravina,raul.ravina,katherine.fernandez@cms-grau.com,77820032,inmob,,1,S
+"GARCIA CRISANTA, CAMILA LUCIA",camila.garcia,raul.ravina,raul.ravina,camila.garcia@cms-grau.com,73231687,inmob,,1,S
+"GUTIERREZ MURGA, ROLANDO ALONSO",rolando.gutierrez,raul.ravina,raul.ravina,rolando.gutierrez@cms-grau.com,71656381,inmob,,1,S
+"HERRERA ARTEAGA, MARCO ANTONIO",marco.herrera,raul.ravina,raul.ravina,marco.herrera@cms-grau.com,77916743,inmob,,1,S
+"NARRO ALBERCA, JESUS ALEJANDRO",alejandro.narro,raul.ravina,raul.ravina,alejandro.narro@cms-grau.com,75257136,inmob,,1,S
+"RAMIREZ ANDIA, FRANKLIN JUNIOR",franklin.ramirez,raul.ravina,raul.ravina,franklin.ramirez@cms-grau.com,77029730,inmob,,1,S
+"VASQUEZ CUADRA, ANDRES JONATHAN",andres.vasquez,raul.ravina,raul.ravina,andres.vasquez@cms-grau.com,74307840,inmob,,1,S
+"SEGURA DULANTO, SANDRA PAMELA",sandra.segura,raul.ravina,raul.ravina,sandra.segura@cms-grau.com,40990024,inmob,,1,S
+"RAVINA SANCHEZ, RAUL",raul.ravina,raul.ravina,raul.ravina,raul.ravina@cms-grau.com,25790137,inmob,,1,S
+"SORIA PALACIOS, FRANCO",franco.soria,franco.soria,franco.soria,franco.soria@cms-grau.com,25772991,inmob,,1,S
+"ALMONTE NINA, NATALIA",natalia.almonte,claudia.flecha,claudia.flecha,natalia.almonte@cms-grau.com,46620099,laboral,,1,S
+"GARCIA FUENTES, MARIA LOURDES",lourdes.garcia,claudia.flecha,claudia.flecha,lourdes.garcia@cms-grau.com,9303986,laboral,,1,S
+"HERRERA TAFUR, FRANCO SALVADOR",franco.herrera,claudia.flecha,claudia.flecha,franco.herrera@cms-grau.com,44623952,laboral,,1,S
+"MACIAS DANCE, SANTIAGO ALBERTO",santiago.macias,claudia.flecha,claudia.flecha,santiago.macias@cms-grau.com,43053454,laboral,,1,S
+"MOORE VALENCIA, ESAR PAUL ROBERT",esar.moore,claudia.flecha,claudia.flecha,esar.moore@cms-grau.com,41880777,laboral,,1,S
+"SEMINARIO GOMEZ, LORENA",lorena.seminario,claudia.flecha,claudia.flecha,lorena.seminario@cms-grau.com,41259509,laboral,,1,S
+"VARGAS LLAURY, CECILIA MARIA",cecilia.vargas,claudia.flecha,claudia.flecha,cecilia.vargas@cms-grau.com,40299744,laboral,,1,S
+"URQUIZO BOBADILLA, ESTEFANIA ALEXANDRA",estefania.urquizo,claudia.flecha,claudia.flecha,estefania.urquizo@cms-grau.com,48298504,laboral,,1,S
+"BACALLA ALIPAZAGA, JOSE AMADOR",jose.bacalla,claudia.flecha,claudia.flecha,jose.bacalla@cms-grau.com,48496011,laboral,,1,S
+"DELGADO GUILLEN, SHEYLA ANGGELY",sheyla.delgado,claudia.flecha,claudia.flecha,sheyla.delgado@cms-grau.com,71951172,laboral,,1,S
+"ESPEJO MENESES, SCARLETTE",scarlette.espejo,claudia.flecha,claudia.flecha,scarlette.espejo@cms-grau.com,72322986,laboral,,1,S
+"CASTILLO TAPIA, CARLOS",carlos.castillo,claudia.flecha,claudia.flecha,carlos.castillo@cms-grau.com,25737105,laboral,,1,S
+"FLORES VERAMENDI, ROBER RONY",rober.flores,claudia.flecha,claudia.flecha,rober.flores@cms-grau.com,10722351,laboral,,1,S
+"PADILLA AGUILAR, VALERIE",valerie.padilla,claudia.flecha,claudia.flecha,valerie.padilla@cms-grau.com,45659107,laboral,,1,S
+"BURGOS CUBILLAS, JOSE MANUEL",jose.burgos,claudia.flecha,claudia.flecha,jose.burgos@cms-grau.com,7590032,laboral,,1,S
+"FLECHA DE LA OLIVA, CLAUDIA MELISA",claudia.flecha,claudia.flecha,claudia.flecha,claudia.flecha@cms-grau.com,9392145,laboral,,1,S
+"CAMACHO GARLAND, DANIELA ALEJANDRA",daniela.camacho,jenny.rubianes,augusto.arce,daniela.camacho@cms-grau.com,47098453,marketing,,1,S
+"COBOS  LAU, THIARA FERNANDA",thiara.cobos,jenny.rubianes,augusto.arce,thiara.cobos@cms-grau.om,71929921,marketing,,1,S
+"LEGUIA RUBIO, MARIA CLAUDIA",mariaclaudia.leguia,jenny.rubianes,augusto.arce,mariaclaudia.leguia@cms-grau.com,46312952,marketing,,1,S
+"MATEO CIELO, JAZMIN",jazmin.mateo,jenny.rubianes,augusto.arce,jazmin.mateo@cms-grau.com,48141263,marketing,,1,S
+"RUBIANES AVILEZ, JENNY MILAGROS",jenny.rubianes,augusto.arce,augusto.arce,jenny.rubianes@cms-grau.com,10770507,marketing,,1,S
+"AHUMADA PADILLA, FELIPE ANDRES",felipe.ahumada,cecilia.gonzales,cecilia.gonzales,felipe.ahumada@cms-grau.com,43367931,mineria,,1,S
+"GARGUREVICH LIZARZABURU, PATRICIA",patricia.gargurevich,cecilia.gonzales,cecilia.gonzales,patricia.gargurevich@cms-grau.com,41362600,mineria,,1,S
+"TOMAS COTERA, CLAUDIA ANGELICA",claudia.tomas,cecilia.gonzales,cecilia.gonzales,claudia.tomas@cms-grau.com,46424176,mineria,,1,S
+"ESPADA BARREDA, ALESSANDRA",alessandra.espada,cecilia.gonzales,cecilia.gonzales,alessandra.espada@cms-grau.com,47849035,mineria,,1,S
+"LARA TELLO, LUCERO ANDREA",lucero.lara,cecilia.gonzales,cecilia.gonzales,lucero.lara@cms-grau.com,76784191,mineria,,1,S
+"MALAGA SOBERON, NATHALIE",nathalie.malaga,cecilia.gonzales,cecilia.gonzales,nathalie.malaga@cms-grau.com,46215444,mineria,,1,S
+"MENESES SALVATIERRA, JULIETTE FABIOLA",juliette.meneses,cecilia.gonzales,cecilia.gonzales,juliette.meneses@cms-grau.com,76974786,mineria,,1,S
+"REYES O'NEILL, ALVARO",alvaro.reyes,cecilia.gonzales,cecilia.gonzales,alvaro.reyes@cms-grau.com,76284742,mineria,,1,S
+"DIAZ POLIN, GILBERTO AUGUSTO",augusto.diaz,cecilia.gonzales,cecilia.gonzales,augusto.diaz@cms-grau.com,43739670,mineria,,1,S
+"GOMEZ QUINTANA, EMILIA EDITH",emilia.gomez,cecilia.gonzales,cecilia.gonzales,emilia.gomez@cms-grau.com,6454235,mineria,,1,S
+"MEJIA WALL, MARGARITA HERMILIA",margarita.mejia,cecilia.gonzales,cecilia.gonzales,margarita.mejia@cms-grau.com,7727101,mineria,,1,S
+"ARAGAKI NAKAHODO, AMELIA MARITE",marite.aragaki,cecilia.gonzales,cecilia.gonzales,marite.aragaki@cms-grau.com,40687135,mineria,,1,S
+"FERREYRA MARTINEZ, RAUL ALFREDO",raul.ferreyra,cecilia.gonzales,cecilia.gonzales,raul.ferreyra@cms-grau.com,40960614,mineria,,1,S
+"GONZALES GUERRA, CECILIA",cecilia.gonzales,cecilia.gonzales,cecilia.gonzales,cecilia.gonzales@cms-grau.com,8199428,mineria,,1,S
+"GRAU MALACHOWSKI, MIGUEL",miguel.grau,cecilia.gonzales,cecilia.gonzales,miguel.grau@cms-grau.com,8243249,mineria,,1,S
+"PAUTRAT MEDINA, LILIANA PATRICIA",liliana.pautrat,cecilia.gonzales,cecilia.gonzales,liliana.pautrat@cms-grau.com,6016534,mineria,,1,S
+"ALVAREZ FLORES, OMAR AUGUSTO",omar.alvarez,andrea.pulgar,juancarlos.escudero,omar.alvarez@cms-grau.com,40195801,tecno,,1,S
+"PULGAR BAZAN, ANDREA PATRICIA",andrea.pulgar,juancarlos.escudero,juancarlos.escudero,andrea.pulgar@cms-grau.com,40315281,tecno,,1,S
+"ABANTO BOJORQUEZ, JESUS",jesus.abanto,carlos.hamann,carlos.hamann,jesus.abanto@cms-grau.com,40948091,petro,,1,S
+"DIEZ CANSECO MURGUIA, ALEJANDRO FEDERICO",alejandro.diezcanseco,carlos.hamann,carlos.hamann,alejandro.diezcanseco@cms-grau.com,46221791,petro,,1,S
+"LOZADA SALAZAR, DANIELA VALLERY",daniela.lozada,carlos.hamann,carlos.hamann,daniela.lozada@cms-grau.com,76310172,petro,,1,S
+"ALTUNA RUIZ, MARIA CRISTINA",cristina.altuna,carlos.hamann,carlos.hamann,cristina.altuna@cms-grau.com,76183885,petro,,1,S
+"PAZ VALDEZ, TELMO JOSE",telmo.paz,carlos.hamann,carlos.hamann,telmo.paz@cms-grau.com,48497435,petro,,1,S
+"SANDOVAL LLANOS, CARMEN PAOLA",paola.sandoval,carlos.hamann,carlos.hamann,paola.sandoval@cms-grau.com,7533679,petro,,1,S
+"ASTORGA PHILIPPON, JESUS AUGUSTO",augusto.astorga,augusto.astorga,augusto.astorga,augusto.astorga@cms-grau.com,9351456,petro,,1,S
+"HAMANN GARCIA BELAUNDE, CARLOS DOMINGO",carlos.hamann,carlos.hamann,carlos.hamann,carlos.hamann@cms-grau.com,7629947,petro,,1,S
+"BAZAN PUENTE ARNAO, ANDREA ESTEFANIA",andrea.bazan,luisalberto.linan,luisalberto.linan,andrea.bazan@cms-grau.com,45897131,procesal,,1,S
+"CALDERON JACINTO, LILIANA",liliana.calderon,luisalberto.linan,luisalberto.linan,liliana.calderon@cms-grau.com,41766187,procesal,,1,S
+"CARRION CARRANZA, NICOLAS RODRIGO MARTIN",nicolas.carrion,luisalberto.linan,luisalberto.linan,nicolas.carrion@cms-grau.com,44868869,procesal,,1,S
+"CUEVA VACCARO, CAROLINA MERCEDES",carolina.cueva,luisalberto.linan,luisalberto.linan,carolina.cueva@cms-grau.com,40668723,procesal,,1,S
+"HUAMAN ESPINOZA, JOHAM JUNIOR FABIANI",joham.huaman,luisalberto.linan,luisalberto.linan,joham.huaman@cms-grau.com,47539107,procesal,,1,S
+"MANRIQUE RUESTA, AUGUSTO LUIS MIGUEL",luismiguel.manrique,luisalberto.linan,luisalberto.linan,luismiguel.manrique@cms-grau.com,42783271,procesal,,1,S
+"OCHOA CORIPUNA, ANDREA YAHAIRA",andrea.ochoa,luisalberto.linan,luisalberto.linan,andrea.ochoa@cms-grau.com,72429456,procesal,,1,S
+"RAMIREZ AREVALO, ROMARIO JUAN FRANCISCO",romario.ramirez,luisalberto.linan,luisalberto.linan,romario.ramirez@cms-grau.com,47187832,procesal,,1,S
+"TELLO CARBAJAL, ISABEL MABILA",isabel.tello,luisalberto.linan,luisalberto.linan,isabel.tello@cms-grau.com,46803762,procesal,,1,S
+"VALDEZ SILVA, FRANCISCO ANTONIO",francisco.valdez,luisalberto.linan,luisalberto.linan,francisco.valdez@cms-grau.com,43664240,procesal,,1,S
+"ACEVEDO BLANCO, ANA CLAUDIA",anaclaudia.acevedo,luisalberto.linan,luisalberto.linan,anaclaudia.acevedo@cms-grau.com,46780454,procesal,,1,S
+"HELGUERO , TATIANA ROMINA",tatiana.helguero,luisalberto.linan,luisalberto.linan,tatiana.helguero@cms-grau.com,344624,procesal,,1,S
+"LUYO HUAMAN, MIGUEL ALEJANDRO",miguel.luyo,luisalberto.linan,luisalberto.linan,miguel.luyo@cms-grau.com,71994724,procesal,,1,S
+"ALVARADO OSORES, GONZALO SEBASTIAN",gonzalo.alvarado,luisalberto.linan,luisalberto.linan,gonzalo.alvarado@cms-grau.com,72653578,procesal,,1,S
+"BARRIENTOS BENITES, SAID JESUS",said.barrientos,luisalberto.linan,luisalberto.linan,said.barrientos@cms-grau.com,73455044,procesal,,1,S
+"DEL AGUILA PEÑA, MARTHA GRACIELA",martha.delaguila,luisalberto.linan,luisalberto.linan,martha.delaguila@cms-grau.com,70657292,procesal,,1,S
+"DUFFOO SOLOGUREN, RODRIGO FRANCISCO",rodrigo.duffoo,luisalberto.linan,luisalberto.linan,rodrigo.duffoo@cms-grau.com,74964985,procesal,,1,S
+"MAGALLANES VALLE, ALVARO JAVIER",alvaro.magallanes,luisalberto.linan,luisalberto.linan,alvaro.magallanes@cms-grau.com,71329347,procesal,,1,S
+"VIZCARRA PRINCIPE, VICTORIA BELEN",victoria.vizcarra,luisalberto.linan,luisalberto.linan,victoria.vizcarra@cms-grau.com,48057152,procesal,,1,S
+"YARINGAÑO CAMPOS, DORA LUCIA",dora.yaringano,luisalberto.linan,luisalberto.linan,dora.yaringano@cms-grau.com,72808673,procesal,,1,S
+"ISIMURA MADARIAGA, JORGE ELBERTH",jorge.isimura,luisalberto.linan,luisalberto.linan,jorge.isimura@cms-grau.com,40382638,procesal,,1,S
+"NINA JIHUALLANCA, JOSE ANTONIO",joseantonio.nina,luisalberto.linan,luisalberto.linan,joseantonio.nina@cms-grau.com,40336269,procesal,,1,S
+"MAZZETTI BRACAMONTE, PILAR",pilar.mazzetti,luisalberto.linan,luisalberto.linan,pilar.mazzetti@cms-grau.com,6783278,procesal,,1,S
+"CISNEROS TORRES, VANESSA",vanessa.cisneros,vanessa.cisneros,vanessa.cisneros,vanessa.cisneros@cms-grau.com,40061952,procesal,,1,S
+"LIÑAN ARANA, LUIS ALBERTO",luisalberto.linan,luisalberto.linan,luisalberto.linan,luisalberto.linan@cms-grau.com,8873131,procesal,,1,S
+"RAFAEL PARQUE, ROCIO MAGALY",rocio.rafael,mercedes.ramirez,augusto.arce,rocio.rafael@cms-grau.com,42540633,rrhh,,1,S
+"RAMIREZ GUTIERREZ, MERCEDES AZUCENA",mercedes.ramirez,augusto.arce,augusto.arce,mercedes.ramirez@cms-grau.com,41196985,rrhh,,1,S
+"CHAVA PARIONA, FERMIN",#¡VALOR!,augusto.arce,augusto.arce,x@xx.com,9733189,seguridad,,1,S
+"DIAZ DIAZ, JOSE HELDER",#¡VALOR!,augusto.arce,augusto.arce,x@xx.com,40104762,seguridad,,1,S
+"VIGIL CARVAJAL, ROSARIO",rosario.vigil,augusto.arce,augusto.arce,rosario.vigil@cms-grau.com,8282571,seguridad,,1,S
+"ZANINI BRIONES, MARCELO",#¡VALOR!,augusto.arce,augusto.arce,x@xx.com,25495882,seguridad,,1,S
+"AVALOS BALLON, MICHAEL ANTHONY",michael.avalos,jesus.garavito,augusto.arce,michael.avalos@cms-grau.com,45238269,it,admin,1,S
+"AVILA ARQUEROS, CESAR SANTOS",cesar.avila,jesus.garavito,augusto.arce,cesar.avila@cms-grau.com,44687578,it,,1,S
+"GARAVITO VERA, JESUS",jesus.garavito,augusto.arce,augusto.arce,jesus.garavito@cms-grau.com,10058769,it,,1,S
+"HUANHUAYO HUACHOS, DITER RUBEN",diter.huanhuayo,jesus.garavito,augusto.arce,diter.huanhuayo@cms-grau.com,42260710,it,,1,S
+"LOVATON FLORES, LUCIO ANDRES",lucio.lovaton,jesus.garavito,augusto.arce,lucio.lovaton@cms-grau.com,41370251,it,,1,S
+"GOMEZ DE LA TORRE KUSIANOVICH, LUIS ALBERTO",luis.gomezdelatorre,javier.ballon-landa,javier.ballon-landa,luis.gomezdelatorre@cms-grau.com,8243745,corporativo,,1,S
+"TAPIA FRANCO, ALFREDO",alfredo.tapia,javier.ballon-landa,javier.ballon-landa,alfredo.tapia@cms-grau.com,10265511,corporativo,,1,S
+"TEJADA MALDONADO, VICTOR JAVIER",javier.tejada,javier.ballon-landa,javier.ballon-landa,javier.tejada@cms-grau.com,6250720,corporativo,,1,S
+"GONZALES LOPEZ, CARLA",carla.gonzales,javier.ballon-landa,javier.ballon-landa,carla.gonzales@cms-grau.com,7855232,corporativo,,1,S
+"BALLON-LANDA CORDOVA, JAVIER",javier.ballon-landa,javier.ballon-landa,javier.ballon-landa,javier.ballon-landa@cms-grau.com,7816462,corporativo,,1,S
+"MUSSO VENTO, ALBERTO",alberto.musso,javier.ballon-landa,javier.ballon-landa,alberto.musso@cms-grau.com,10376971,corporativo,,1,S
+"BENDRELL ZULOAGA, DEBORATH PATRICIA",deborath.bendrell,augusto.arce,augusto.arce,deborath.bendrell@cms-grau.com,44200776,tesoreria,,1,S
+"NARVAEZ FERNANDEZ, VICTOR MANUEL",victor.narvaez,augusto.arce,augusto.arce,victor.narvaez@cms-grau.com,7131522,tesoreria,tesorero,1,S
+"CHIRINOS SOTA, CARLOS ENRIQUE",carlos.chirinos,cesar.castro,cesar.castro,carlos.chirinos@cms-grau.com,40617651,tribu,,1,S
+"DAVILA ALVARADO, CESAR ALEJANDRO",cesar.davila,cesar.castro,cesar.castro,cesar.davila@cms-grau.com,45562025,tribu,,1,S
+"FLORES BENAVIDES, RODRIGO",rodrigo.flores,cesar.castro,cesar.castro,rodrigo.flores@cms-grau.com,41145461,tribu,,1,S
+"KIHARA NOMURA, ADRIANA",adriana.kihara,cesar.castro,cesar.castro,adriana.kihara@cms-grau.com,46608289,tribu,,1,S
+"MANZUR SAAVEDRA, YESSICA PATRICIA",yessica.manzur,cesar.castro,cesar.castro,yessica.manzur@cms-grau.com,43461275,tribu,,1,S
+"ROJAS SALDAÑA, EDUARDO",eduardo.rojas,cesar.castro,cesar.castro,eduardo.rojas@cms-grau.com,41555416,tribu,,1,S
+"FRIAS ARCE, MARIA ALEJANDRA",mariaalejandra.frias,cesar.castro,cesar.castro,mariaalejandra.frias@cms-grau.com,72928590,tribu,,1,S
+"VARGAS  VILLAFRANCA, LINDA ROSARIO",rosario.vargas,cesar.castro,cesar.castro,rosario.vargas@cms-grau.com,48321940,tribu,,1,S
+"RAVELO DELGADO, ALICIA DEL MILAGRO",alicia.ravelo,cesar.castro,cesar.castro,alicia.ravelo@cms-grau.com,46000133,tribu,,1,S
+"HERNANDEZ BAZO, MARIA ELENA",mariaelena.hernandez,cesar.castro,cesar.castro,mariaelena.hernandez@cms-grau.com,25611439,tribu,,1,S
+"CASTRO SALINAS, CESAR",cesar.castro,cesar.castro,cesar.castro,cesar.castro@cms-grau.com,7805742,tribu,,1,S
+"CEVASCO ZAVALA, ROLANDO",rolando.cevasco,rolando.cevasco,rolando.cevasco,rolando.cevasco@cms-grau.com,9343716,tribu,,1,S
+"DAPELLO VILOGRON, FIORELLA LUCIA",fiorella.dapello,augusto.arce,augusto.arce,fiorella.dapello@cms-grau.com,40377228,volan,,1,S
