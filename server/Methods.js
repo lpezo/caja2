@@ -1,6 +1,6 @@
-var PdfTable = require('voilab-pdf-table'),
-    PdfDocument = require('pdfkit'),
-    fitColumn = require('voilab-pdf-table/plugins/fitcolumn'),
+var //PdfTable = require('voilab-pdf-table'),
+    //PdfDocument = require('pdfkit'),
+    //fitColumn = require('voilab-pdf-table/plugins/fitcolumn'),
 	fs = require('fs');
 
 Meteor.methods({
@@ -315,74 +315,18 @@ Meteor.methods({
      },
      
      ReporteGasto: function(id){
-     	var doc = new PdfDocument({size: 'A4', margin: 50});
-     	doc.pipe(fs.createWriteStream('out.pdf'));
+
+     	var data = Solicitudes.findOne({_id: id});
+     	if (!data)
+     		return;
+
+     	var doc = new PDFDocument({size: 'A4', margin: 50});
 		doc.fontSize(12);
-		doc.info['Title'] = 'Reporte de Gasto';
-		doc.info['Author'] = 'Luis Pezo';
-		//doc.text('PDFKit is simple', 10, 30, {align: 'center', width: 200});
+		doc.text('PDFKit is simple ' + data.nombre.nombre, 10, 30, {align: 'center', width: 200});
+		// Save it on myApp/public/pdf folder (or any place) with the Fibered sync methode:
+		doc.writeSync(process.env.PWD + '/public/pdf/PDFKitExample.pdf');
 
-		//return Base64.encode(doc.outputSync());
-		//doc.writeSync(process.env.PWD + '/public/pdf/unpdf.pdf');
 
-	    table = new PdfTable(doc, {bottomMargin: 30});
-        table
-            // add some plugins (here, a 'fit-to-width' for a column)
-            .addPlugin(new fitColumn({
-                column: 'description'
-            }))
-            // set defaults to your columns
-            .setColumnsDefaults({
-                headerBorder: 'B',
-                align: 'right'
-            })
-            // add table columns
-            .addColumns([
-                {
-                    id: 'fecha',
-                    header: 'Fecha',
-                    align: 'left'
-                },
-                {
-                    id: 'usuario',
-                    header: 'Usuario',
-                    width: 100
-                },
-                {
-                    id: 'area',
-                    header: 'Area',
-                    width: 40
-                },
-                {
-                    id: 'cliente',
-                    header: 'Cliente',
-                    width: 100
-                },
-                {
-                	id: 'motivo',
-                	header: 'Motivo',
-                	width: 50
-                },
-                {
-                	id: 'origen',
-                	header: 'Origen',
-                	width: 70
-                },
-                {
-                	id: 'destino',
-                	header: 'Destino',
-                	width: 70
-                }
-            ])
-            // add events (here, we draw headers on each new page)
-            .onPageAdded(function (tb) {
-                tb.addHeader();
-            });
-		
-		//return doc.outputSync();
-		doc.end();
-	  	return;
-		
 	  }
 
 });
